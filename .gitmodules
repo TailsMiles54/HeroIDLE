@@ -1,0 +1,3 @@
+[submodule "Assets/Tools/BlackTailsUnityTools"]
+	path = Assets/Tools/BlackTailsUnityTools
+	url = https://github.com/TailsMiles54/BlackTailsUnityTools.git
