@@ -12,5 +12,37 @@ public class EnemySetting : ScriptableObject
     public enum EnemyType
     {
         Bat,
+        Dragon,
+        EvilMage,
+        Golem,
+        Plant,
+        Orc,
+        Skeleton,
+        Slime,
+        Spider,
+        Turtle,
+        
+        Beholder,
+        BlackKnight,
+        ChestMonster,
+        CrabMonster,
+        FylingDemon,
+        LizardWarrior,
+        RatAssassin,
+        Specter,
+        Werewolf,
+        WormMonster,
+        
+        BattleBee,
+        BishopKnight,
+        Cactus,
+        Cyclops,
+        DemonKing,
+        Fishman,
+        MushroomAngry,
+        MushroomSmile,
+        NagaWizard,
+        Salamander,
+        StingRay
     }
 }
