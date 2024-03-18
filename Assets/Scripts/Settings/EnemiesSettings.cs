@@ -11,4 +11,9 @@ public class EnemiesSettings : ScriptableObject
     {
         return EnemiesSettingsList.First(x => x.Type == enemyType);
     }
+
+    public void AddEnemy(EnemySetting enemySetting)
+    {
+        EnemiesSettingsList.Add(enemySetting);
+    }
 }

@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
 
     private EnemySetting.EnemyType _nextEnemyType = EnemySetting.EnemyType.Bat;
 
-    private GameObject _currentEnemyObject;
+    private EnemyController _currentEnemyObject;
     
     private void Awake()
     {
@@ -31,7 +31,9 @@ public class EnemySpawner : MonoBehaviour
         
         EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(_nextEnemyType);
         
-        _currentEnemyObject = Instantiate(newEnemySetting.Prefab, EnemyParent);
+        _currentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
+        var enemyController = _currentEnemyObject.GetComponent<EnemyController>();
+        BattleManager.Instance.SetupEnemy(enemyController);
         
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
     }

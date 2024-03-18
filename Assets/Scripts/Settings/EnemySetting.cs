@@ -8,7 +8,7 @@ public class EnemySetting : ScriptableObject
     [field: SerializeField] public int Health { get; private set; }
     [field: SerializeField] public int MoneyReward { get; private set; }
     [field: SerializeField] public int ScoreReward { get; private set; }
-    [field: SerializeField] public GameObject Prefab { get; private set; }
+    [field: SerializeField] public EnemyController EnemyController { get; private set; }
     
     public enum EnemyType
     {
@@ -45,5 +45,10 @@ public class EnemySetting : ScriptableObject
         NagaWizard,
         Salamander,
         StingRay
+    }
+
+    public void Init(EnemyType enemyType)
+    {
+        Type = enemyType;
     }
 }

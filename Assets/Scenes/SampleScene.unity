@@ -878,6 +878,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b419e164ab53516438da636332342da9, type: 3}
+--- !u!114 &398786064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2694729868252554923, guid: b419e164ab53516438da636332342da9, type: 3}
+  m_PrefabInstance: {fileID: 398786063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d923850c394400fb61d3ab8aaf9380e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &445884905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7849377050755362001, guid: d46388ce1f854b24db247ac7b23e7d41, type: 3}
@@ -1671,6 +1682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInfoPanel: {fileID: 2117538491}
   EnemyInfoPanel: {fileID: 924267431}
+  <PlayerController>k__BackingField: {fileID: 398786064}
 --- !u!4 &661752583
 Transform:
   m_ObjectHideFlags: 0
