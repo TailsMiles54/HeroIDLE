@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
-  m_Name: EnemySetting
+  m_Name: Bat
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Type>k__BackingField: 0
+  <Damage>k__BackingField: 5
+  <Health>k__BackingField: 50
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
+  <Prefab>k__BackingField: {fileID: 5122791751604650877, guid: 5fcc7db371567874ca08ef847654eaa4, type: 3}

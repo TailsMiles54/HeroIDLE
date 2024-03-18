@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02401efec38f2c94d84b41d2f62b4586, type: 3}
   m_Name: EnemiesSettings
   m_EditorClassIdentifier: 
-  <EnemiesSettingsList>k__BackingField: {fileID: 0}
+  <EnemiesSettingsList>k__BackingField:
+  - {fileID: 11400000, guid: 6e41d7fd7e6a74f419397a6d33dc4701, type: 2}

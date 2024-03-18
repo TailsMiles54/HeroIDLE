@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9c39fa90a3b164fa46c39c00becb1a, type: 3}
   m_Name: PrefabsSettings
   m_EditorClassIdentifier: 
-  _gameObjects: []
+  _gameObjects:
+  - {fileID: -361135845151680882, guid: a881f82941d04734a9ed9c6419b05cca, type: 3}

@@ -1,13 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using BlackTailsUnityTools.Editor;
 using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public UpgradeManager Instance { get; private set; }
+    [field: SerializeField] public Transform UpgradesParent { get; private set; }
+
+    private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
+    
+    public static UpgradeManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        foreach (var upgradeSetting in UpgradesSettings.Upgrades)
+        {
+            var upgradePanelPrefab = SettingsProvider.Get<PrefabsSettings>().GetObject<UpgradePanelView>();
+            var upgradePanelInstance = Instantiate(upgradePanelPrefab, UpgradesParent);
+            upgradePanelInstance.Setup(upgradeSetting);
+        }
     }
 }
