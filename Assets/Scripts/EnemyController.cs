@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class EnemyController : Fighter
 {
-    [field: SerializeField] public float Health { get; private set; }
-    
-    public void TakeDamage(float damage)
+    [field: SerializeField] public EnemySetting EnemySetting { get; private set; }
+
+    public void Setup(EnemySetting enemySetting)
     {
-        Health -= damage;
+        EnemySetting = enemySetting; 
+        Health = enemySetting.Health;
     }
 }

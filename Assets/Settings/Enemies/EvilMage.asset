@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EvilMage
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 2
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -5326131634848129909, guid: 29961b9b4a231d144b2c005d35ed661f, type: 3}

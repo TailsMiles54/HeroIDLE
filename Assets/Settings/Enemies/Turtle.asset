@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Turtle
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 9
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 7048602778724810521, guid: 8d8ea3e69ddbc354890cc8070592c0de, type: 3}

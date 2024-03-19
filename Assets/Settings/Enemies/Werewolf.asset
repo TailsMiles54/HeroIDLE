@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Werewolf
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 18
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -3083239588663424987, guid: 694cd2463b5341d458a3a1cfcf775cd9, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 6
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 7127501880850671424, guid: cf8364f633401424fba5ccbf3494cef4, type: 3}

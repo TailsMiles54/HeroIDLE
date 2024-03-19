@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StingRay
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 30
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -116495045459936104, guid: 4436801b163e08c469a51092390dba95, type: 3}

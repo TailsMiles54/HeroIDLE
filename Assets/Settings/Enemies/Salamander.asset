@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Salamander
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 29
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 2876362024602576873, guid: d8f1c7c0a17fa444886b4b4c44a04df0, type: 3}

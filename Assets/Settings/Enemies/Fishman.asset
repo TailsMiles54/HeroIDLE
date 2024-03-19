@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fishman
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 25
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 2951422082123472202, guid: c85ca17154c0ddb4e81ed477b6405dd3, type: 3}

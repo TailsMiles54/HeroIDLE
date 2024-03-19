@@ -8,6 +8,8 @@ using UnityEngine;
 public class PlayerController : Fighter
 {
     public static PlayerController Instance { get; private set; }
+    public int Money {get; private set;}
+    public int Score {get; private set;}
     
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
@@ -19,13 +21,21 @@ public class PlayerController : Fighter
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.MoneyBonus, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.CriticalDamage, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.CriticalChance, Level = 0 },
+        new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Heal, Level = 0 },
     };
+    
+    public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, _upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
 
     private Coroutine _autoAttackCoroutine;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, _upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
     }
 
     public void Upgrade(UpgradeSetting.UpgradeType upgradeType)
@@ -60,6 +70,12 @@ public class PlayerController : Fighter
 
         AnimationController.Attack();
         BattleManager.Instance.DamageEnemy(damage);
+    }
+
+    public void AddReward(int money, int score)
+    {
+        Money += money;
+        Score += score;
     }
 
     public class UpgradeLevel

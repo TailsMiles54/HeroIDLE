@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BlackKnight
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 11
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -3697890653207078681, guid: b0a6bfeeab72c8c45b3f1dd362815068, type: 3}

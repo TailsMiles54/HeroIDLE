@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Beholder
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 10
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -609839265931364153, guid: 5254ed640261c22489413f4a94b44c51, type: 3}

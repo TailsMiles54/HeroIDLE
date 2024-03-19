@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Specter
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 17
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 5449473371565256940, guid: 4b09d8c334dfac04d94f99b797d6b8e7, type: 3}

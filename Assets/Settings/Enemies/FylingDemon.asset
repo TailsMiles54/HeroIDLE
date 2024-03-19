@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FylingDemon
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 14
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -4320881323580161723, guid: 110be2f5be1f3aa45a6674e7f301edf7, type: 3}

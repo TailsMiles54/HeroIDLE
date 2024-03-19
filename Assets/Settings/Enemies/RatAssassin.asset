@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RatAssassin
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 16
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 7727870437482272086, guid: 295f145101f6d25418133119ee8e3f34, type: 3}

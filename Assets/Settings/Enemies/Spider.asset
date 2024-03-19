@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Spider
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 8
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: 334978309703360252, guid: 90f2a208933ef5a4aadcf6c929deb309, type: 3}

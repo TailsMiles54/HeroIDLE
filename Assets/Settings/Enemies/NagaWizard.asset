@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NagaWizard
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 28
-  <Damage>k__BackingField: 0
-  <Health>k__BackingField: 0
-  <MoneyReward>k__BackingField: 0
-  <ScoreReward>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <Health>k__BackingField: 10
+  <MoneyReward>k__BackingField: 10
+  <ScoreReward>k__BackingField: 10
   <EnemyController>k__BackingField: {fileID: -4049681700584901733, guid: e36e7b09dadf81943be33b29ac852153, type: 3}

@@ -26,6 +26,19 @@ public class BattleManager : MonoBehaviour
 
     public void DamageEnemy(float damage)
     {
-        _enemyController.TakeDamage(damage);
+        var health = _enemyController.TakeDamage(damage);
+        EnemyInfoPanel.UpdateHealthBar(health, _enemyController.EnemySetting.Health);
+
+        if (health <= 0)
+        {
+            GetReward(_enemyController.EnemySetting);
+            EnemySpawner.Instance.NextStep();
+        }
+    }
+
+    private void GetReward(EnemySetting enemySetting)
+    {
+        PlayerController.AddReward(enemySetting.MoneyReward, enemySetting.ScoreReward);
+        PlayerInfoPanel.UpdatePanel(PlayerController.Instance);
     }
 }

@@ -14,15 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   <Type>k__BackingField: 1
-  <DefaultValue>k__BackingField: 10
   <Value>k__BackingField:
   - Cost: 0
-    BonusValue: 0
-  - Cost: 0
-    BonusValue: 0
-  - Cost: 0
-    BonusValue: 0
-  - Cost: 0
-    BonusValue: 0
-  - Cost: 0
-    BonusValue: 0
+    Value: 100
+  - Cost: 100
+    Value: 150
+  - Cost: 200
+    Value: 200
+  - Cost: 300
+    Value: 300
+  - Cost: 500
+    Value: 500

@@ -2,5 +2,12 @@ using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
-    [field: SerializeField] public AnimationController AnimationController;
+    public AnimationController AnimationController;
+    [field: SerializeField] public float Health { get; protected set; }
+    
+    public float TakeDamage(float damage)
+    {
+        Health -= damage;
+        return Health;
+    }
 }

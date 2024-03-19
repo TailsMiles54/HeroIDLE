@@ -24,5 +24,6 @@ public class UpgradeSetting : ScriptableObject
         MoneyBonus,
         CriticalDamage,
         CriticalChance,
+        Heal,
     }
 }

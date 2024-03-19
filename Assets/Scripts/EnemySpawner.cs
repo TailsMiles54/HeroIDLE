@@ -33,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
         
         _currentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
         var enemyController = _currentEnemyObject.GetComponent<EnemyController>();
+        enemyController.Setup(newEnemySetting);
         BattleManager.Instance.SetupEnemy(enemyController);
         
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
