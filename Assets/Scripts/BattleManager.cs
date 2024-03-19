@@ -21,7 +21,11 @@ public class BattleManager : MonoBehaviour
 
     public void NextEnemy()
     {
-        EnemySpawner.Instance.NextWaveStep();
-        EnemySpawner.Instance.SpawnEnemy();
+        EnemySpawner.Instance.NextStep();
+    }
+
+    public void DamageEnemy(float damage)
+    {
+        _enemyController.TakeDamage(damage);
     }
 }

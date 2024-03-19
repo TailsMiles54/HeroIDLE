@@ -7,14 +7,13 @@ public class UpgradeSetting : ScriptableObject
 {
     [field: SerializeField] public Sprite Icon { get; private set; }
     [field: SerializeField] public UpgradeType Type { get; private set; }
-    [field: SerializeField] public float DefaultValue { get; private set; }
     [field: SerializeField] public List<UpgradeLevel> Value { get; private set; }
     
     [Serializable]
     public struct UpgradeLevel
     {
         public int Cost;
-        public float BonusValue;
+        public float Value;
     }
     
     public enum UpgradeType

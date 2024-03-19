@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemy();
     }
 
-    public void SpawnEnemy()
+    private void SpawnEnemy()
     { 
         if (_currentEnemyObject != null)
         {
@@ -38,8 +38,9 @@ public class EnemySpawner : MonoBehaviour
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
     }
 
-    public void NextWaveStep()
+    public void NextStep()
     {
         _currentWaveStep++;
+        SpawnEnemy();
     }
 }

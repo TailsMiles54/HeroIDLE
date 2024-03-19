@@ -14,6 +14,14 @@ public class TestSystem : MonoBehaviour
                 BattleManager.Instance.NextEnemy();
             }
         }
+        
+        if (Input.GetKey(KeyCode.T))
+        {
+            if (Input.GetKeyUp(KeyCode.U))
+            {
+                PlayerController.Instance.Upgrade(UpgradeSetting.UpgradeType.AutoAttackSpeed);
+            }
+        }
     }
     #endif
 }
