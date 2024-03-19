@@ -18,4 +18,10 @@ public class BattleManager : MonoBehaviour
     {
         _enemyController = enemyController;
     }
+
+    public void NextEnemy()
+    {
+        EnemySpawner.Instance.NextWaveStep();
+        EnemySpawner.Instance.SpawnEnemy();
+    }
 }

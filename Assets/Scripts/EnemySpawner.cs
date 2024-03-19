@@ -8,9 +8,9 @@ public class EnemySpawner : MonoBehaviour
     
     public static EnemySpawner Instance { get; private set; }
 
-    private EnemySetting.EnemyType _nextEnemyType = EnemySetting.EnemyType.Bat;
-
     private EnemyController _currentEnemyObject;
+    private WaveSetting WaveSetting => SettingsProvider.Get<WaveSetting>();
+    private int _currentWaveStep = 0;
     
     private void Awake()
     {
@@ -23,18 +23,23 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void SpawnEnemy()
-    {
+    { 
         if (_currentEnemyObject != null)
         {
-            Destroy(_currentEnemyObject);
+            Destroy(_currentEnemyObject.gameObject);
         }
         
-        EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(_nextEnemyType);
+        EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]);
         
         _currentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
         var enemyController = _currentEnemyObject.GetComponent<EnemyController>();
         BattleManager.Instance.SetupEnemy(enemyController);
         
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
+    }
+
+    public void NextWaveStep()
+    {
+        _currentWaveStep++;
     }
 }
