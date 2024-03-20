@@ -1,4 +1,5 @@
 using UnityEngine;
+using VInspector;
 
 public class AnimationController : MonoBehaviour
 {
@@ -6,5 +7,12 @@ public class AnimationController : MonoBehaviour
     public void Attack()
     {
         _animator.SetTrigger("Attack");
+    }
+
+    [Button("SetupAnimator")]
+    public void SetupAnimator()
+    {
+        if (_animator == null)
+            _animator = GetComponent<Animator>();
     }
 }

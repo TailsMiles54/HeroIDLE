@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 3
   <Damage>k__BackingField: 10
+  <AutoAttackTime>k__BackingField: 2
   <Health>k__BackingField: 10
   <MoneyReward>k__BackingField: 10
   <ScoreReward>k__BackingField: 10

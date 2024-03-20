@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : Fighter
@@ -8,5 +9,28 @@ public class EnemyController : Fighter
     {
         EnemySetting = enemySetting; 
         Health = enemySetting.Health;
+        StartCoroutine(StartAutoAttack());
+    }
+
+    private IEnumerator StartAutoAttack()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(EnemySetting.AutoAttackTime);
+            Attack();
+        }
+    }
+
+    public void Attack()
+    {
+        var damage = EnemySetting.Damage;
+
+        AnimationController.Attack();
+        BattleManager.Instance.DamagePlayer(damage);
+    }
+
+    ~EnemyController()
+    {
+        StopCoroutine(StartAutoAttack());
     }
 }
