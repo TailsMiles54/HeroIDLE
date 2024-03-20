@@ -38,7 +38,7 @@ public class BattleManager : MonoBehaviour
 
     private void GetReward(EnemySetting enemySetting)
     {
-        PlayerController.AddReward(enemySetting.MoneyReward, enemySetting.ScoreReward);
+        PlayerController.AddReward(enemySetting.MoneyReward, 1);
         PlayerInfoPanel.UpdatePanel(PlayerController.Instance);
     }
 
