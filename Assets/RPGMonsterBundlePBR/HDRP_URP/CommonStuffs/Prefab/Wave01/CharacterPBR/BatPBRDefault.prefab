@@ -1244,6 +1244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationController: {fileID: -3061567172994187450}
+  <Health>k__BackingField: 0
+  <EnemySetting>k__BackingField: {fileID: 0}
 --- !u!114 &-3061567172994187450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,6 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d22cd8548a4581ac9bdca2a44c6e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
 --- !u!1 &5122791751604650879
 GameObject:
   m_ObjectHideFlags: 0

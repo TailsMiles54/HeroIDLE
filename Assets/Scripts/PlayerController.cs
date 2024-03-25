@@ -13,7 +13,7 @@ public class PlayerController : Fighter
     
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
-    private List<UpgradeLevel> _upgrades = new List<UpgradeLevel>()
+    public List<UpgradeLevel> Upgrades { get; private set; } = new List<UpgradeLevel>()
     {
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Damage, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Health, Level = 0 },
@@ -24,7 +24,7 @@ public class PlayerController : Fighter
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Heal, Level = 0 },
     };
     
-    public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, _upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
+    public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
 
     private Coroutine _autoAttackCoroutine;
 
@@ -35,12 +35,12 @@ public class PlayerController : Fighter
 
     private void Start()
     {
-        Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, _upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
+        Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
     }
 
     public void Upgrade(UpgradeSetting.UpgradeType upgradeType)
     {
-        _upgrades.First(x => x.Type == upgradeType).Level++;
+        Upgrades.First(x => x.Type == upgradeType).Level++;
 
         if (upgradeType == UpgradeSetting.UpgradeType.AutoAttackSpeed)
         {
@@ -51,12 +51,23 @@ public class PlayerController : Fighter
         }
     }
 
+    public bool TryPurchase(int cost)
+    {
+        if (Money >= cost)
+        {
+            Money -= cost;
+            return true;
+        }
+
+        return false;
+    }
+
     private IEnumerator StartAutoAttack()
     {
         while (true)
         {
             var waitTime = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.AutoAttackSpeed,
-                _upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.AutoAttackSpeed).Level);
+                Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.AutoAttackSpeed).Level);
             Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Attack();
@@ -65,7 +76,7 @@ public class PlayerController : Fighter
 
     public void Attack()
     {
-        var damage = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Damage, _upgrades
+        var damage = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Damage, Upgrades
                          .First(x => x.Type == UpgradeSetting.UpgradeType.Damage).Level);
 
         AnimationController.Attack();

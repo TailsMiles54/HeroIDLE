@@ -5,16 +5,18 @@ public class EnemyController : Fighter
 {
     [field: SerializeField] public EnemySetting EnemySetting { get; private set; }
 
+    private Coroutine _autoAttack;
+
     public void Setup(EnemySetting enemySetting)
     {
         EnemySetting = enemySetting; 
         Health = enemySetting.Health;
-        StartCoroutine(StartAutoAttack());
+        _autoAttack = StartCoroutine(StartAutoAttack());
     }
 
     private IEnumerator StartAutoAttack()
     {
-        while (true)
+        while (EnemySetting.AutoAttackTime < 15 && Health > 0 && EnemySetting.AutoAttackTime > 1)
         {
             yield return new WaitForSeconds(EnemySetting.AutoAttackTime);
             Attack();
@@ -27,10 +29,5 @@ public class EnemyController : Fighter
 
         AnimationController.Attack();
         BattleManager.Instance.DamagePlayer(damage);
-    }
-
-    ~EnemyController()
-    {
-        StopCoroutine(StartAutoAttack());
     }
 }

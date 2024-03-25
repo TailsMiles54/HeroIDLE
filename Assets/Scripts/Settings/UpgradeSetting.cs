@@ -6,6 +6,7 @@ using UnityEngine;
 public class UpgradeSetting : ScriptableObject
 {
     [field: SerializeField] public Sprite Icon { get; private set; }
+    [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public UpgradeType Type { get; private set; }
     [field: SerializeField] public List<UpgradeLevel> Value { get; private set; }
     

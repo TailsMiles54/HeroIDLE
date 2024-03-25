@@ -1,15 +1,21 @@
+using System;
 using UnityEngine;
 using VInspector;
 
 public class AnimationController : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+
+    private void Awake()
+    {
+        SetupAnimator();
+    }
+
     public void Attack()
     {
         _animator.SetTrigger("Attack");
     }
 
-    [Button("SetupAnimator")]
     public void SetupAnimator()
     {
         if (_animator == null)
