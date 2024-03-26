@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BishopKnight
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 21
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 40
+  <AutoAttackTime>k__BackingField: 3
+  <Health>k__BackingField: 900
+  <MoneyReward>k__BackingField: 45
+  <ScoreReward>k__BackingField: 25
   <EnemyController>k__BackingField: {fileID: 8133647124943723236, guid: 1b8a08acfc971424998f2988106c052c, type: 3}

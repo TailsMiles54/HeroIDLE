@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DemonKing
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 24
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 70
+  <AutoAttackTime>k__BackingField: 3
+  <Health>k__BackingField: 1500
+  <MoneyReward>k__BackingField: 75
+  <ScoreReward>k__BackingField: 40
   <EnemyController>k__BackingField: {fileID: -3012520231542635480, guid: 0c273d70dc5cbd04483d090101f38ff8, type: 3}

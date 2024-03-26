@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Dragon
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 1
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 15
+  <AutoAttackTime>k__BackingField: 3.5
+  <Health>k__BackingField: 300
+  <MoneyReward>k__BackingField: 20
+  <ScoreReward>k__BackingField: 12
   <EnemyController>k__BackingField: {fileID: 4609687824784735933, guid: c39e367af575afc4796126e11f24c2d6, type: 3}

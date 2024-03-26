@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: WormMonster
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 19
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 27
+  <AutoAttackTime>k__BackingField: 3.5
+  <Health>k__BackingField: 650
+  <MoneyReward>k__BackingField: 36
+  <ScoreReward>k__BackingField: 21
   <EnemyController>k__BackingField: {fileID: 1509135270148349951, guid: fbdf8fba2e4c1a54e9606f9afa875a13, type: 3}

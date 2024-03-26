@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MushroomSmile
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 27
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 38
+  <AutoAttackTime>k__BackingField: 3
+  <Health>k__BackingField: 850
+  <MoneyReward>k__BackingField: 47
+  <ScoreReward>k__BackingField: 27
   <EnemyController>k__BackingField: {fileID: -36090132914220352, guid: f93a80eb77e9f6649aa7f0a0859a66c7, type: 3}

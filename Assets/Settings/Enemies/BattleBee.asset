@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BattleBee
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 20
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 35
+  <AutoAttackTime>k__BackingField: 2.5
+  <Health>k__BackingField: 800
+  <MoneyReward>k__BackingField: 40
+  <ScoreReward>k__BackingField: 22
   <EnemyController>k__BackingField: {fileID: -7966844596299643429, guid: 93c2570ec7c45234a8a5ab6f02f2e404, type: 3}

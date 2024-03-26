@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Orc
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 5
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 6
+  <AutoAttackTime>k__BackingField: 3
+  <Health>k__BackingField: 90
+  <MoneyReward>k__BackingField: 9
+  <ScoreReward>k__BackingField: 5
   <EnemyController>k__BackingField: {fileID: -8317597398413112574, guid: 4298979513797df4382f37a310539c37, type: 3}

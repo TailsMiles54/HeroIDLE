@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Golem
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 3
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 13
+  <AutoAttackTime>k__BackingField: 4
+  <Health>k__BackingField: 400
+  <MoneyReward>k__BackingField: 24
+  <ScoreReward>k__BackingField: 14
   <EnemyController>k__BackingField: {fileID: -7794508125368921331, guid: 2fa7690c43ff1a647b8a4e68f2b3f118, type: 3}

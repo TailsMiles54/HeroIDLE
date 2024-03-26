@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Beholder
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 10
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 20
+  <AutoAttackTime>k__BackingField: 2.5
+  <Health>k__BackingField: 350
+  <MoneyReward>k__BackingField: 26
+  <ScoreReward>k__BackingField: 15
   <EnemyController>k__BackingField: {fileID: -609839265931364153, guid: 5254ed640261c22489413f4a94b44c51, type: 3}

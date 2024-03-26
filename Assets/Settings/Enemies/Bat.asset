@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Bat
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 0
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 3
+  <AutoAttackTime>k__BackingField: 25
+  <Health>k__BackingField: 60
+  <MoneyReward>k__BackingField: 62
+  <ScoreReward>k__BackingField: 1
   <EnemyController>k__BackingField: {fileID: 5888656816447926094, guid: 5fcc7db371567874ca08ef847654eaa4, type: 3}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MushroomAngry
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 26
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 42
+  <AutoAttackTime>k__BackingField: 2.5
+  <Health>k__BackingField: 950
+  <MoneyReward>k__BackingField: 52
+  <ScoreReward>k__BackingField: 28
   <EnemyController>k__BackingField: {fileID: -2013823082439361845, guid: 49ffa0c81b5c5d34d8aea414dc4f0c2e, type: 3}

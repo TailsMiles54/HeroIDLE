@@ -5,7 +5,7 @@ public class EnemySetting : ScriptableObject
 {
     [field: SerializeField] public EnemyType Type { get; private set; }
     [field: SerializeField] public int Damage { get; private set; }
-    [field: SerializeField] public int AutoAttackTime { get; private set; }
+    [field: SerializeField] public float AutoAttackTime { get; private set; }
     [field: SerializeField] public int Health { get; private set; }
     [field: SerializeField] public int MoneyReward { get; private set; }
     [field: SerializeField] public int ScoreReward { get; private set; }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Cyclops
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 23
-  <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Damage>k__BackingField: 45
+  <AutoAttackTime>k__BackingField: 4
+  <Health>k__BackingField: 1000
+  <MoneyReward>k__BackingField: 50
+  <ScoreReward>k__BackingField: 26
   <EnemyController>k__BackingField: {fileID: -2306995027342956508, guid: 500ba32d0cc3f774e85ff3a526f2db91, type: 3}

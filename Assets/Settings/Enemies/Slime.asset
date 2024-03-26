@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Slime
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 7
-  <Damage>k__BackingField: 10
+  <Damage>k__BackingField: 2
   <AutoAttackTime>k__BackingField: 2
-  <Health>k__BackingField: 10
-  <MoneyReward>k__BackingField: 10
-  <ScoreReward>k__BackingField: 10
+  <Health>k__BackingField: 50
+  <MoneyReward>k__BackingField: 5
+  <ScoreReward>k__BackingField: 1
   <EnemyController>k__BackingField: {fileID: -1372733148215058916, guid: c2bd6c3376893c7468ea961bc3bce014, type: 3}
