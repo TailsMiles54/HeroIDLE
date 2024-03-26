@@ -10,41 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e206d2135fa3b7444945d9ada8dad4b7, type: 3}
-  m_Name: CriticalChance
+  m_Name: HealthRegeneration
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   <Description>k__BackingField: 
-  <Type>k__BackingField: 5
+  <Type>k__BackingField: 6
   <Value>k__BackingField:
   - Cost: 0
-    Value: 5
+    Value: 2
   - Cost: 200
-    Value: 10
+    Value: 2.2
   - Cost: 250
-    Value: 15
+    Value: 2.42
   - Cost: 300
-    Value: 20
+    Value: 2.66
   - Cost: 350
-    Value: 25
+    Value: 2.92
   - Cost: 400
-    Value: 30
+    Value: 3.2
   - Cost: 450
-    Value: 35
+    Value: 3.5
   - Cost: 500
-    Value: 40
+    Value: 3.82
   - Cost: 550
-    Value: 45
+    Value: 4.16
   - Cost: 600
-    Value: 50
+    Value: 4.52
   - Cost: 650
-    Value: 55
+    Value: 4.9
   - Cost: 700
-    Value: 60
+    Value: 5.3
   - Cost: 750
-    Value: 65
+    Value: 5.72
   - Cost: 800
-    Value: 70
+    Value: 6.16
   - Cost: 850
-    Value: 75
+    Value: 6.62
   - Cost: 900
-    Value: 80
+    Value: 7.1

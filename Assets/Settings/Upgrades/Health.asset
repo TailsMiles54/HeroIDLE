@@ -13,15 +13,38 @@ MonoBehaviour:
   m_Name: Health
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <Description>k__BackingField: 
   <Type>k__BackingField: 1
   <Value>k__BackingField:
   - Cost: 0
     Value: 100
   - Cost: 100
-    Value: 150
+    Value: 110
+  - Cost: 150
+    Value: 121
   - Cost: 200
-    Value: 200
+    Value: 133
+  - Cost: 250
+    Value: 146
   - Cost: 300
-    Value: 300
+    Value: 160
+  - Cost: 350
+    Value: 175
+  - Cost: 400
+    Value: 191
+  - Cost: 450
+    Value: 208
   - Cost: 500
-    Value: 500
+    Value: 226
+  - Cost: 550
+    Value: 245
+  - Cost: 600
+    Value: 265
+  - Cost: 650
+    Value: 286
+  - Cost: 700
+    Value: 308
+  - Cost: 750
+    Value: 331
+  - Cost: 800
+    Value: 355
