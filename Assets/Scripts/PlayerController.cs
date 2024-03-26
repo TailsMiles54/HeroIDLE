@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class PlayerController : Fighter
 {
+    [field: SerializeField] public PlayerInfoPanel PlayerInfoPanel;
     public static PlayerController Instance { get; private set; }
     public int Money {get; private set;}
     public int Score {get; private set;}
@@ -49,6 +50,8 @@ public class PlayerController : Fighter
                     
             _autoAttackCoroutine = StartCoroutine(StartAutoAttack());
         }
+        
+        PlayerInfoPanel.UpdatePanel(Instance);
     }
 
     public bool TryPurchase(int cost)

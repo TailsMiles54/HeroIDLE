@@ -33,7 +33,7 @@ public class UpgradePanelView : MonoBehaviourPrefab
     {
         if(PlayerController.Instance.TryPurchase(upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost))
         {
-            CurrentPlayerUpgrade.Level++;
+            PlayerController.Instance.Upgrade(upgradeSetting.Type);
             UpdatePanel(upgradeSetting);
         }
     }

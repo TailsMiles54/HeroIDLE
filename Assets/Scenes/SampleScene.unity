@@ -958,6 +958,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1096647485}
+    - target: {fileID: 2694729868252554923, guid: b419e164ab53516438da636332342da9, type: 3}
+      propertyPath: PlayerInfoPanel
+      value: 
+      objectReference: {fileID: 2117538491}
     - target: {fileID: 7224149203388998861, guid: b419e164ab53516438da636332342da9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -16,6 +16,6 @@ MonoBehaviour:
   <Damage>k__BackingField: 3
   <AutoAttackTime>k__BackingField: 25
   <Health>k__BackingField: 60
-  <MoneyReward>k__BackingField: 62
+  <MoneyReward>k__BackingField: 6
   <ScoreReward>k__BackingField: 1
   <EnemyController>k__BackingField: {fileID: 5888656816447926094, guid: 5fcc7db371567874ca08ef847654eaa4, type: 3}
