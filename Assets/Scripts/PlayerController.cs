@@ -54,6 +54,12 @@ public class PlayerController : Fighter
         PlayerInfoPanel.UpdatePanel(Instance);
     }
 
+    public void Review()
+    {
+        Health = MaxHealth;
+        PlayerInfoPanel.UpdatePanel(Instance);
+    }
+
     public bool TryPurchase(int cost)
     {
         if (Money >= cost)

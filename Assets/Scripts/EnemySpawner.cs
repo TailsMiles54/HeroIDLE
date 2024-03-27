@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemy();
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     { 
         if (_currentEnemyObject != null)
         {
@@ -58,5 +58,10 @@ public class EnemySpawner : MonoBehaviour
         _currentWaveStep = Math.Clamp(_currentWaveStep - 1, 0, SettingsProvider.Get<EnemiesSettings>().EnemiesSettingsList.Count);
         NextEnemyText.text = "Next enemy: " + SettingsProvider.Get<EnemiesSettings>()
             .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Type.ToString();
+    }
+
+    public void GoToFirstEnemy()
+    {
+        _currentWaveStep = 0;
     }
 }

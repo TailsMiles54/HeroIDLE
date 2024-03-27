@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c03c10084a34e11ba56aa89eacbc5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RewardId: 1
 --- !u!114 &8001779325755168539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,4 +991,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5808082223984933536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2709396900582390480}
+        m_TargetAssemblyTypeName: DeathPopup, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
