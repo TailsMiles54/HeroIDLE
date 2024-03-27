@@ -49,6 +49,10 @@ public class BattleManager : MonoBehaviour
 
         if (health <= 0)
         {
+            PopupSystem.Instance.ShowPopup(new DeathPopupSettings()
+            {
+                
+            });
         }
     }
 }
