@@ -1,2 +1,2 @@
-Build path: D:/Unity/Release/PluginYG/PluginYG
-Build number: 4
+Build path: D:/Projects/HeroIDLE/Builds
+Build number: 5

@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "HeioIDLE/Settings/EnemySetting", fileName = "EnemySetting")]
 public class EnemySetting : ScriptableObject
 {
+    [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public EnemyType Type { get; private set; }
     [field: SerializeField] public int Damage { get; private set; }
     [field: SerializeField] public float AutoAttackTime { get; private set; }

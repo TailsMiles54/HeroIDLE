@@ -9,7 +9,7 @@ public class EnemyInfoPanel : MonoBehaviour
     
     public void UpdatePanel(EnemySetting enemySetting)
     {
-        Title.text = enemySetting.Type.ToString();
+        Title.text = enemySetting.Name;
         UpdateHealthBar(enemySetting.Health, enemySetting.Health);
     }
 

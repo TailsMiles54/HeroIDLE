@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: BattleBee
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u0411\u043E\u0435\u0432\u0430\u044F \u043F\u0447\u0435\u043B\u0430"
   <Type>k__BackingField: 20
   <Damage>k__BackingField: 35
   <AutoAttackTime>k__BackingField: 2.5

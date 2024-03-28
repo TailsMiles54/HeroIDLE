@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
@@ -5,10 +6,11 @@ using YG;
 public class DeathPopup : Popup<DeathPopupSettings>
 {
     [SerializeField] private int RewardId;
+    [SerializeField] private TMP_Text _scoreText;
     
     public override void Setup(DeathPopupSettings settings)
     {
-
+        _scoreText.text = $"Счёт: {settings.Score}";
     }
 
     private void OnEnable() => YandexGame.RewardVideoEvent += Rewarded;
@@ -38,5 +40,5 @@ public class DeathPopup : Popup<DeathPopupSettings>
 
 public class DeathPopupSettings : BasePopupSettings
 {
-        
+    public int Score;
 }

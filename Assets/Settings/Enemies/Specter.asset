@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Specter
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u041F\u0440\u0438\u0437\u0440\u0430\u043A"
   <Type>k__BackingField: 17
   <Damage>k__BackingField: 11
   <AutoAttackTime>k__BackingField: 3
