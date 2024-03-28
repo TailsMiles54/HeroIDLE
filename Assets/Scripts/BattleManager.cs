@@ -51,7 +51,7 @@ public class BattleManager : MonoBehaviour
         {
             PopupSystem.Instance.ShowPopup(new DeathPopupSettings()
             {
-                
+                Score = PlayerController.Instance.Score
             });
         }
     }

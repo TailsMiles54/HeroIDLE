@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Golem
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u0413\u043E\u043B\u0435\u043C"
   <Type>k__BackingField: 3
   <Damage>k__BackingField: 13
   <AutoAttackTime>k__BackingField: 4

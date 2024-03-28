@@ -49,14 +49,14 @@ public class EnemySpawner : MonoBehaviour
     public void NextEnemy()
     {
         _currentWaveStep = Math.Clamp(_currentWaveStep + 1, 0, SettingsProvider.Get<EnemiesSettings>().EnemiesSettingsList.Count);
-        NextEnemyText.text = "Next enemy: " + SettingsProvider.Get<EnemiesSettings>()
-            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Type.ToString();
+        NextEnemyText.text = "Следующий враг: " + SettingsProvider.Get<EnemiesSettings>()
+            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Name;
     }
 
     public void PreviousEnemy()
     {
         _currentWaveStep = Math.Clamp(_currentWaveStep - 1, 0, SettingsProvider.Get<EnemiesSettings>().EnemiesSettingsList.Count);
-        NextEnemyText.text = "Next enemy: " + SettingsProvider.Get<EnemiesSettings>()
-            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Type.ToString();
+        NextEnemyText.text = "Следующий враг: " + SettingsProvider.Get<EnemiesSettings>()
+            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Name;
     }
 }

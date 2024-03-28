@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: EvilMage
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u0422\u0451\u043C\u043D\u044B\u0439 \u043C\u0430\u0433"
   <Type>k__BackingField: 2
   <Damage>k__BackingField: 18
   <AutoAttackTime>k__BackingField: 2.5

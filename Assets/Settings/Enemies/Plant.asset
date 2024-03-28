@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Plant
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u041A\u0443\u0441\u0442"
   <Type>k__BackingField: 4
   <Damage>k__BackingField: 4
   <AutoAttackTime>k__BackingField: 3
