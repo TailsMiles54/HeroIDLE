@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Spider
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u041F\u0430\u0432\u0443\u043A"
   <Type>k__BackingField: 8
   <Damage>k__BackingField: 5
   <AutoAttackTime>k__BackingField: 2.5

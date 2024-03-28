@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "HeioIDLE/Settings/UpgradeSetting", fileName = "UpgradeSetting")]
 public class UpgradeSetting : ScriptableObject
 {
-    [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public Sprite Icon { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public UpgradeType Type { get; private set; }

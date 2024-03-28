@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206d2135fa3b7444945d9ada8dad4b7, type: 3}
   m_Name: AutoAttackSpeed
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u0427\u0430\u0441\u0442\u043E\u0442\u0430 \u0430\u0432\u0442\u043E\u0430\u0442\u0430\u043A\u0438"
   <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   <Description>k__BackingField: 
   <Type>k__BackingField: 2

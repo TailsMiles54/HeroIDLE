@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Fishman
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u0424\u0438\u0448\u043C\u0430\u043D"
   <Type>k__BackingField: 25
   <Damage>k__BackingField: 65
   <AutoAttackTime>k__BackingField: 4

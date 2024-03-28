@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: WormMonster
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u041E\u0433\u0440\u043E\u043C\u044B\u043D\u0439 \u0447\u0435\u0440\u0432\u044C"
   <Type>k__BackingField: 19
   <Damage>k__BackingField: 27
   <AutoAttackTime>k__BackingField: 3.5

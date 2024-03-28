@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: ChestMonster
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u041C\u0438\u043C\u0438\u043A"
   <Type>k__BackingField: 12
   <Damage>k__BackingField: 22
   <AutoAttackTime>k__BackingField: 3

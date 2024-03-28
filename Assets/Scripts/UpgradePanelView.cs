@@ -9,7 +9,6 @@ public class UpgradePanelView : MonoBehaviourPrefab
     [field: SerializeField] public TMP_Text Title;
     [field: SerializeField] public TMP_Text Info;
     [field: SerializeField] public TMP_Text Content;
-    [field: SerializeField] public Image Image;
     [SerializeField] private Button _button;
 
     private UpgradeSetting.UpgradeType _upgradeType;
@@ -24,11 +23,10 @@ public class UpgradePanelView : MonoBehaviourPrefab
     private void UpdatePanel(UpgradeSetting upgradeSetting)
     {
         _upgradeType = upgradeSetting.Type; 
-        Title.text = upgradeSetting.Name;
+        Title.text = upgradeSetting.Type.ToString();
         Info.text = $"{CurrentPlayerUpgrade.Level}/{upgradeSetting.Value.Count}" +
                     $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} --> <color=\"green\">{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#005500>";
-        Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
-        Image.sprite = upgradeSetting.Icon;
+        Content.text = $"Price: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
     }
 
     private void Upgrade(UpgradeSetting upgradeSetting)

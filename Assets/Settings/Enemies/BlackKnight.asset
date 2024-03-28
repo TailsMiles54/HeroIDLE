@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: BlackKnight
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u0422\u0451\u043C\u043D\u044B\u0439 \u0440\u044B\u0446\u0430\u0440\u044C"
   <Type>k__BackingField: 11
   <Damage>k__BackingField: 30
   <AutoAttackTime>k__BackingField: 3
