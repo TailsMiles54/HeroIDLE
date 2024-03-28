@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CriticalDamage
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041A\u0440\u0438\u0442 \u0443\u0440\u043E\u043D"
-  <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: c4e246c987a2745d9a604b6edc5567e2, type: 3}
   <Description>k__BackingField: 
   <Type>k__BackingField: 4
   <Value>k__BackingField:

@@ -34,6 +34,9 @@ public class PlayerController : Fighter
         Instance = this;
     }
 
+    public float GetUpgradeValue(UpgradeSetting.UpgradeType upgradeType) =>
+        UpgradesSettings.GetBonusValue(upgradeType, Upgrades.First(x => x.Type == upgradeType).Level);
+    
     private void Start()
     {
         Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);

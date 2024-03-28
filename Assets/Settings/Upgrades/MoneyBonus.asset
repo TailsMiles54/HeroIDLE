@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MoneyBonus
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0411\u043E\u043D\u0443\u0441 \u043A \u0434\u0435\u043D\u044C\u0433\u0430\u043C"
-  <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 29afbc2e1e86f4bb7beebc0822be2840, type: 3}
   <Description>k__BackingField: 
   <Type>k__BackingField: 3
   <Value>k__BackingField:
