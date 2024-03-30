@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: "\u0421\u0442\u0440\u0430\u0448\u043D\u044B\u0439 \u043A\u0440\u0430\u0431"
   <Type>k__BackingField: 13
   <Damage>k__BackingField: 25
-  <AutoAttackTime>k__BackingField: 3.5
+  <AutoAttackTime>k__BackingField: 2.5
   <Health>k__BackingField: 550
   <MoneyReward>k__BackingField: 32
   <ScoreReward>k__BackingField: 17

@@ -16,7 +16,7 @@ public class EnemyController : Fighter
 
     private IEnumerator StartAutoAttack()
     {
-        while (EnemySetting.AutoAttackTime < 15 && Health > 0 && EnemySetting.AutoAttackTime > 1)
+        while (EnemySetting.AutoAttackTime < 15 && Health > 0 && EnemySetting.AutoAttackTime > 0)
         {
             yield return new WaitForSeconds(EnemySetting.AutoAttackTime);
             Attack();
