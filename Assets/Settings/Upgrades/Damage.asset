@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206d2135fa3b7444945d9ada8dad4b7, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <Name>k__BackingField: "\u0423\u0440\u043E\u043D"
+  <Icon>k__BackingField: {fileID: 21300000, guid: 57c9bc65f09114f608733305e6e15e2a, type: 3}
   <Description>k__BackingField: 
   <Type>k__BackingField: 0
   <Value>k__BackingField:

@@ -26,6 +26,15 @@ public class BattleManager : MonoBehaviour
 
     public void DamageEnemy(float damage)
     {
+        var criticalChance = PlayerController.Instance.GetUpgradeValue(UpgradeSetting.UpgradeType.CriticalChance);
+        var criticalDamage = PlayerController.Instance.GetUpgradeValue(UpgradeSetting.UpgradeType.CriticalDamage);
+        
+        if(Random.Range(0,100f) <= criticalChance)
+        {
+            var critical = criticalDamage/100+1; 
+            damage *= critical;
+        }
+        
         var health = _enemyController.TakeDamage(damage);
         EnemyInfoPanel.UpdateHealthBar(health, _enemyController.EnemySetting.Health);
 
@@ -38,7 +47,12 @@ public class BattleManager : MonoBehaviour
 
     private void GetReward(EnemySetting enemySetting)
     {
-        PlayerController.AddReward(enemySetting.MoneyReward, 1);
+        var moneyReward = PlayerController.Instance.GetUpgradeValue(UpgradeSetting.UpgradeType.MoneyBonus);
+
+        var bonusMoney = enemySetting.MoneyReward * (moneyReward / 100 + 1);
+        var newMoneyReward = Mathf.RoundToInt(bonusMoney); 
+        
+        PlayerController.AddReward(newMoneyReward, enemySetting.ScoreReward);
         PlayerInfoPanel.UpdatePanel(PlayerController.Instance);
     }
 
@@ -51,7 +65,7 @@ public class BattleManager : MonoBehaviour
         {
             PopupSystem.Instance.ShowPopup(new DeathPopupSettings()
             {
-                
+                Score = PlayerController.Instance.Score
             });
         }
     }

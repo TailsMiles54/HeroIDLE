@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: LizardWarrior
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u0412\u043E\u0438\u043D-\u044F\u0449\u0435\u0440"
   <Type>k__BackingField: 15
   <Damage>k__BackingField: 10
-  <AutoAttackTime>k__BackingField: 3
+  <AutoAttackTime>k__BackingField: 2
   <Health>k__BackingField: 180
   <MoneyReward>k__BackingField: 14
   <ScoreReward>k__BackingField: 8
