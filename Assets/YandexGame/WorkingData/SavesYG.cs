@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace YG
 {
     [System.Serializable]
@@ -16,6 +18,13 @@ namespace YG
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
 
+
+        
+        public List<PlayerController.UpgradeLevel> Upgrades;
+        public int Money;
+        public int Score;
+        public float Health;
+        
         // Ваши сохранения
 
         // ...
@@ -27,7 +36,7 @@ namespace YG
         public SavesYG()
         {
             // Допустим, задать значения по умолчанию для отдельных элементов массива
-
+            
             openLevels[1] = true;
         }
     }

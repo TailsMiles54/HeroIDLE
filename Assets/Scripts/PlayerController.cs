@@ -44,6 +44,8 @@ public class PlayerController : Fighter
                     
         _autoAttackCoroutine = StartCoroutine(StartAutoAttack());
         _healCoroutine = StartCoroutine(Regeneration());
+        
+        SaveManager.Instance.GetLoad();
     }
 
     public void Upgrade(UpgradeSetting.UpgradeType upgradeType)
@@ -67,6 +69,7 @@ public class PlayerController : Fighter
         }
         
         PlayerInfoPanel.UpdatePanel(Instance);
+        SaveManager.Instance.Save(Instance);
     }
 
     public void Review()
@@ -92,7 +95,6 @@ public class PlayerController : Fighter
         {
             var waitTime = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.AutoAttackSpeed,
                 Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.AutoAttackSpeed).Level);
-            Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Attack();
         }
@@ -128,5 +130,17 @@ public class PlayerController : Fighter
     {
         public UpgradeSetting.UpgradeType Type;
         public int Level;
+    }
+
+    public void LoadProgress(int savesDataScore, int savesDataMoney, List<UpgradeLevel> savesDataUpgrades)
+    {
+        if(savesDataScore != 0)
+            Score = savesDataScore;
+        
+        if(savesDataMoney != 0)
+            Money = savesDataMoney;
+        
+        if(savesDataUpgrades != null && savesDataUpgrades.Count != 0)
+            Upgrades = savesDataUpgrades;
     }
 }

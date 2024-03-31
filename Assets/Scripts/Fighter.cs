@@ -17,4 +17,10 @@ public class Fighter : MonoBehaviour
         Health -= damage;
         return Health;
     }
+
+    public void LoadHealth(float health)
+    {
+        if(health != 0)
+            Health = health;
+    }
 }

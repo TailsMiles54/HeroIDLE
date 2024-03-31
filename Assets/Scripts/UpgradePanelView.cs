@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using BlackTailsUnityTools.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class UpgradePanelView : MonoBehaviourPrefab
     {
         UpdatePanel(upgradeSetting);
         _button.onClick.AddListener(() => Upgrade(upgradeSetting));
+        SaveManager.Instance.Loaded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
     }
 
     private void UpdatePanel(UpgradeSetting upgradeSetting)

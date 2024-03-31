@@ -54,6 +54,7 @@ public class BattleManager : MonoBehaviour
         
         PlayerController.AddReward(newMoneyReward, enemySetting.ScoreReward);
         PlayerInfoPanel.UpdatePanel(PlayerController.Instance);
+        SaveManager.Instance.Save(PlayerController.Instance);
     }
 
     public void DamagePlayer(int damage)
