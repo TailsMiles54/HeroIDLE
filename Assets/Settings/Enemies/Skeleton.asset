@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u0421\u043A\u0435\u043B\u0435\u0442\u043E\u043D"
   <Type>k__BackingField: 6
   <Damage>k__BackingField: 8
-  <AutoAttackTime>k__BackingField: 2.5
+  <AutoAttackTime>k__BackingField: 1.5
   <Health>k__BackingField: 120
   <MoneyReward>k__BackingField: 12
   <ScoreReward>k__BackingField: 6

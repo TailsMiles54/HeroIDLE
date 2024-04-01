@@ -13,6 +13,6 @@ public class PlayerInfoPanel : MonoBehaviour
     public void UpdatePanel(PlayerController playerController)
     {
         HealthBar.value = playerController.Health / playerController.MaxHealth;
-        Money.text = $"Money: {playerController.Money} Score: {playerController.Score}";
+        Money.text = $"Деньги: {playerController.Money} Счёт: {playerController.Score}";
     }
 }

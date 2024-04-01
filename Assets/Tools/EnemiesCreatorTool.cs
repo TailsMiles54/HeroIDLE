@@ -6,6 +6,7 @@ using SettingsProvider = BlackTailsUnityTools.Editor.SettingsProvider;
 
 public class EnemiesCreatorTool
 {
+    #if UNITY_EDITOR
     [MenuItem("BlackTailsTools/Создать объекты противников")]
     static void CreateEnemies()
     {
@@ -25,4 +26,5 @@ public class EnemiesCreatorTool
             Debug.Log($"{enemyType.ToString()}.asset created");
         }
     }
+    #endif
 }

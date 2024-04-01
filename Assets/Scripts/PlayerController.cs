@@ -28,15 +28,24 @@ public class PlayerController : Fighter
     public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
 
     private Coroutine _autoAttackCoroutine;
+    private Coroutine _healCoroutine;
 
     private void Awake()
     {
         Instance = this;
     }
 
+    public float GetUpgradeValue(UpgradeSetting.UpgradeType upgradeType) =>
+        UpgradesSettings.GetBonusValue(upgradeType, Upgrades.First(x => x.Type == upgradeType).Level);
+    
     private void Start()
     {
         Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
+                    
+        _autoAttackCoroutine = StartCoroutine(StartAutoAttack());
+        _healCoroutine = StartCoroutine(Regeneration());
+        
+        SaveManager.Instance.GetLoad();
     }
 
     public void Upgrade(UpgradeSetting.UpgradeType upgradeType)
@@ -51,6 +60,21 @@ public class PlayerController : Fighter
             _autoAttackCoroutine = StartCoroutine(StartAutoAttack());
         }
         
+        if (upgradeType == UpgradeSetting.UpgradeType.Heal)
+        {
+            if (_healCoroutine != null) 
+                StopCoroutine(_healCoroutine);
+                    
+            _healCoroutine = StartCoroutine(Regeneration());
+        }
+        
+        PlayerInfoPanel.UpdatePanel(Instance);
+        SaveManager.Instance.Save(Instance);
+    }
+
+    public void Review()
+    {
+        Health = MaxHealth;
         PlayerInfoPanel.UpdatePanel(Instance);
     }
 
@@ -71,9 +95,19 @@ public class PlayerController : Fighter
         {
             var waitTime = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.AutoAttackSpeed,
                 Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.AutoAttackSpeed).Level);
-            Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Attack();
+        }
+    }
+
+    private IEnumerator Regeneration()
+    {
+        while (true)
+        {
+            var heal = GetUpgradeValue(UpgradeSetting.UpgradeType.Heal);
+            yield return new WaitForSeconds(5);
+            Health += heal;
+            PlayerInfoPanel.UpdatePanel(Instance);
         }
     }
 
@@ -96,5 +130,17 @@ public class PlayerController : Fighter
     {
         public UpgradeSetting.UpgradeType Type;
         public int Level;
+    }
+
+    public void LoadProgress(int savesDataScore, int savesDataMoney, List<UpgradeLevel> savesDataUpgrades)
+    {
+        if(savesDataScore != 0)
+            Score = savesDataScore;
+        
+        if(savesDataMoney != 0)
+            Money = savesDataMoney;
+        
+        if(savesDataUpgrades != null && savesDataUpgrades.Count != 0)
+            Upgrades = savesDataUpgrades;
     }
 }

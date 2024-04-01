@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e7b74209049cea411dbc452050b00, type: 3}
   m_Name: RatAssassin
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u041A\u0440\u044B\u0441\u0430 \u0443\u0431\u0438\u0439\u0446\u0430"
   <Type>k__BackingField: 16
   <Damage>k__BackingField: 12
-  <AutoAttackTime>k__BackingField: 2
+  <AutoAttackTime>k__BackingField: 1
   <Health>k__BackingField: 160
   <MoneyReward>k__BackingField: 15
   <ScoreReward>k__BackingField: 9
