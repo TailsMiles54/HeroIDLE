@@ -16,6 +16,5 @@ public class MonoSingleton<T> : MonoBehaviour where T : Component
             return;
         
         Instance = GetComponent<T>();
-        DontDestroyOnLoad(gameObject);
     }
 }

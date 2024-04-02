@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using YG;
 
@@ -13,6 +14,16 @@ public class SaveManager : MonoSingleton<SaveManager>
         YandexGame.savesData.Money = playerController.Money;
         YandexGame.savesData.Upgrades = playerController.Upgrades;
 
+        YandexGame.SaveProgress();
+    }
+
+    public void RestoreSave()
+    {
+        YandexGame.savesData.Health = 100;
+        YandexGame.savesData.Score = 0;
+        YandexGame.savesData.Money = 0;
+        YandexGame.savesData.Upgrades = new List<PlayerController.UpgradeLevel>();
+        
         YandexGame.SaveProgress();
     }
     

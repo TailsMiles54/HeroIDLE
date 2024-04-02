@@ -34,6 +34,7 @@ public class DeathPopup : Popup<DeathPopupSettings>
 
     public void ReloadGame()
     {
+        SaveManager.Instance.RestoreSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
