@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class BattleManager : MonoBehaviour
     
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
     private EnemyController _enemyController;
+
+    private bool _pause;
+    [SerializeField] private Image _buttonImage;
+    [SerializeField] private Sprite _playSprite;
+    [SerializeField] private Sprite _pauseSprite;
     
     public static BattleManager Instance { get; private set; }
     private void Awake()
@@ -26,6 +32,9 @@ public class BattleManager : MonoBehaviour
 
     public void DamageEnemy(float damage)
     {
+        if(_pause)
+            return;
+        
         var criticalChance = PlayerController.Instance.GetUpgradeValue(UpgradeSetting.UpgradeType.CriticalChance);
         var criticalDamage = PlayerController.Instance.GetUpgradeValue(UpgradeSetting.UpgradeType.CriticalDamage);
         
@@ -68,6 +77,22 @@ public class BattleManager : MonoBehaviour
             {
                 Score = PlayerController.Instance.Score
             });
+        }
+    }
+
+    public void ChangeGameState()
+    {
+        if (!_pause)
+        {
+            _buttonImage.sprite = _playSprite;
+            Time.timeScale = 0;
+            _pause = true;
+        }
+        else
+        {
+            _buttonImage.sprite = _pauseSprite;
+            Time.timeScale = 1;
+            _pause = false;
         }
     }
 }
