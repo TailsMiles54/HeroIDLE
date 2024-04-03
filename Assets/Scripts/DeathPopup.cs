@@ -10,6 +10,7 @@ public class DeathPopup : Popup<DeathPopupSettings>
     
     public override void Setup(DeathPopupSettings settings)
     {
+        Time.timeScale = 0;
         _scoreText.text = $"Счёт: {settings.Score}";
     }
 
@@ -25,6 +26,7 @@ public class DeathPopup : Popup<DeathPopupSettings>
     {
         if (id == RewardId)
         {
+            Time.timeScale = 1;
             PlayerController.Instance.Review();
             EnemySpawner.Instance.GoToFirstEnemy();
             EnemySpawner.Instance.SpawnEnemy();
@@ -34,6 +36,7 @@ public class DeathPopup : Popup<DeathPopupSettings>
 
     public void ReloadGame()
     {
+        Time.timeScale = 1;
         SaveManager.Instance.RestoreSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
