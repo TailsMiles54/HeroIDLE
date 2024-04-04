@@ -28,7 +28,7 @@ public class UpgradePanelView : MonoBehaviourPrefab
         _upgradeType = upgradeSetting.Type; 
         Title.text = upgradeSetting.Name;
         Info.text = $"{CurrentPlayerUpgrade.Level}/{upgradeSetting.Value.Count}" +
-                    $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} --> <color=\"green\">{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#005500>";
+                    $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=\"green\">{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#005500>";
         Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
         Image.sprite = upgradeSetting.Icon;
     }
