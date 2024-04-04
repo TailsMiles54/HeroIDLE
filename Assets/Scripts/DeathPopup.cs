@@ -13,25 +13,11 @@ public class DeathPopup : Popup<DeathPopupSettings>
         Time.timeScale = 0;
         _scoreText.text = $"Счёт: {settings.Score}";
     }
-
-    private void OnEnable() => YandexGame.RewardVideoEvent += Rewarded;
-    private void OnDisable() => YandexGame.RewardVideoEvent -= Rewarded;
     
     public void ShowAd()
     {
-        YandexGame.RewVideoShow(RewardId);
-    }
-
-    void Rewarded(int id)
-    {
-        if (id == RewardId)
-        {
-            Time.timeScale = 1;
-            PlayerController.Instance.Review();
-            EnemySpawner.Instance.GoToFirstEnemy();
-            EnemySpawner.Instance.SpawnEnemy();
-            PopupSystem.Instance.HidePopup();
-        }
+        Debug.Log("Test3");
+        AdManager.ShowAd();
     }
 
     public void ReloadGame()

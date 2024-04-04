@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "799789452656",
+    "project_id": "heroidle",
+    "storage_bucket": "heroidle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799789452656:android:6f861d28410be9cba453b5",
+        "android_client_info": {
+          "package_name": "com.BlackTailsDev.HeroIDLE"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmA7yWv8lmcei8-GbcjiaYZ8Ai-7nTrjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
