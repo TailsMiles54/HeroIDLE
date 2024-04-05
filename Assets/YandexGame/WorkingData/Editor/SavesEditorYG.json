@@ -1,16 +1,47 @@
 {
-    "idSave": 183,
-    "isFirstSession": false,
-    "language": "ru",
-    "promptDone": false,
-    "money": 1,
-    "newPlayerName": "Hello!",
-    "openLevels": [
-        false,
-        true,
-        false
-    ],
-    "Money": 122,
-    "Score": 24,
-    "Health": 60.0
+  "idSave": 3,
+  "isFirstSession": true,
+  "language": "ru",
+  "promptDone": false,
+  "money": 1,
+  "newPlayerName": "Hello!",
+  "openLevels": [
+    false,
+    true,
+    false
+  ],
+  "Upgrades": [
+    {
+      "Type": 0,
+      "Level": 0
+    },
+    {
+      "Type": 1,
+      "Level": 0
+    },
+    {
+      "Type": 2,
+      "Level": 0
+    },
+    {
+      "Type": 3,
+      "Level": 0
+    },
+    {
+      "Type": 4,
+      "Level": 0
+    },
+    {
+      "Type": 5,
+      "Level": 0
+    },
+    {
+      "Type": 6,
+      "Level": 0
+    }
+  ],
+  "Money": 10,
+  "Score": 2,
+  "Health": 20.0,
+  "TutorialComplete": true
 }
