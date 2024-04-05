@@ -1,2 +1,2 @@
-Build path: D:/Projects/HeroIDLE/Builds
-Build number: 5
+Build path: D:/Projects/HeroIDLE/Builds/Yandex
+Build number: 6
