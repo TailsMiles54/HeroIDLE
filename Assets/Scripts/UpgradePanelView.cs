@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using BlackTailsUnityTools.Editor;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,7 +22,11 @@ public class UpgradePanelView : MonoBehaviourPrefab
         UpdatePanel(upgradeSetting);
         _button.onClick.AddListener(() => Upgrade(upgradeSetting));
         SaveManager.Instance.Loaded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
-        PlayerController.Instance.Upgraded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
+        PlayerController.Instance.Upgraded += (upgradeType) =>
+        {
+            if(upgradeType == _upgradeType)
+                UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType), true);
+        };
     }
 
     private void UpdatePanel(UpgradeSetting upgradeSetting, bool withAnim = false)
@@ -32,6 +37,11 @@ public class UpgradePanelView : MonoBehaviourPrefab
                     $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=\"green\">{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#005500>";
         Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
         Image.sprite = upgradeSetting.Icon;
+
+        if (withAnim)
+        {
+            _button.transform.DOShakeScale(0.8f, 1.2f);
+        }
     }
 
     private void Upgrade(UpgradeSetting upgradeSetting)

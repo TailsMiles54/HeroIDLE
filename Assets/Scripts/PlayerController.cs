@@ -11,7 +11,7 @@ public class PlayerController : Fighter
     public static PlayerController Instance { get; private set; }
     public int Money {get; private set;}
     public int Score {get; private set;}
-    public event Action Upgraded;
+    public event Action<UpgradeSetting.UpgradeType> Upgraded;
 
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
@@ -69,7 +69,7 @@ public class PlayerController : Fighter
             _healCoroutine = StartCoroutine(Regeneration());
         }
         
-        Upgraded?.Invoke();
+        Upgraded?.Invoke(upgradeType);
         PlayerInfoPanel.UpdatePanel(Instance);
         SaveManager.Instance.Save(Instance);
     }
