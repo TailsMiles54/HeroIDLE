@@ -80,6 +80,11 @@ public class PlayerController : Fighter
         PlayerInfoPanel.UpdatePanel(Instance);
     }
 
+    public void EquipmentPopup()
+    {
+        PopupSystem.Instance.ShowPopup(new EquipmentPopupSettings());
+    }
+    
     public bool TryPurchase(int cost)
     {
         if (Money >= cost)

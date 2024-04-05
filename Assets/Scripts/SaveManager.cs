@@ -17,6 +17,18 @@ public class SaveManager : MonoSingleton<SaveManager>
         YandexGame.SaveProgress();
     }
 
+    public void TutorialComplete()
+    {
+        YandexGame.savesData.TutorialComplete = true;
+        
+        YandexGame.SaveProgress();
+    }
+
+    public bool LoadTutorialState()
+    {
+        return YandexGame.savesData.TutorialComplete;
+    }
+
     public void RestoreSave()
     {
         YandexGame.savesData.Health = 100;

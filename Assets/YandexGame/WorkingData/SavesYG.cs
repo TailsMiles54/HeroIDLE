@@ -25,6 +25,8 @@ namespace YG
         public int Score;
         public float Health;
         
+        public bool TutorialComplete;
+        
         // Ваши сохранения
 
         // ...
