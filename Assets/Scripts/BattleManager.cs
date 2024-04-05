@@ -13,6 +13,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private Image _buttonImage;
     [SerializeField] private Sprite _playSprite;
     [SerializeField] private Sprite _pauseSprite;
+    [SerializeField] private ParticleSystem _particleCritical;
     
     public static BattleManager Instance { get; private set; }
     private void Awake()
@@ -42,6 +43,7 @@ public class BattleManager : MonoBehaviour
         {
             var critical = criticalDamage/100+1; 
             damage *= critical;
+            _particleCritical.Play();            
         }
         
         var health = _enemyController.TakeDamage(damage);

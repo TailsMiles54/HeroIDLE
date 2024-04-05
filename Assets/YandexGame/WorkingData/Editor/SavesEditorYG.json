@@ -1,17 +1,16 @@
 {
-  "idSave": 141,
-  "isFirstSession": false,
-  "language": "ru",
-  "promptDone": false,
-  "money": 1,
-  "newPlayerName": "Hello!",
-  "openLevels": [
-    false,
-    true,
-    false
-  ],
-  "Upgrades": [],
-  "Money": 0,
-  "Score": 0,
-  "Health": 100.0
+    "idSave": 142,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "Money": 5,
+    "Score": 1,
+    "Health": 76.0
 }
