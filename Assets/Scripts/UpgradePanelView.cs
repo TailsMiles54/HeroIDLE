@@ -21,9 +21,10 @@ public class UpgradePanelView : MonoBehaviourPrefab
         UpdatePanel(upgradeSetting);
         _button.onClick.AddListener(() => Upgrade(upgradeSetting));
         SaveManager.Instance.Loaded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
+        PlayerController.Instance.Upgraded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
     }
 
-    private void UpdatePanel(UpgradeSetting upgradeSetting)
+    private void UpdatePanel(UpgradeSetting upgradeSetting, bool withAnim = false)
     {
         _upgradeType = upgradeSetting.Type; 
         Title.text = upgradeSetting.Name;

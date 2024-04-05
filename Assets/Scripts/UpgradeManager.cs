@@ -8,6 +8,7 @@ public class UpgradeManager : MonoBehaviour
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
     public static UpgradeManager Instance { get; private set; }
+    
     private void Awake()
     {
         Instance = this;
@@ -21,5 +22,10 @@ public class UpgradeManager : MonoBehaviour
             var upgradePanelInstance = Instantiate(upgradePanelPrefab, UpgradesParent);
             upgradePanelInstance.Setup(upgradeSetting);
         }
+    }
+
+    public void ShowAdsUpgradePopup()
+    {
+        PopupSystem.Instance.ShowPopup(new AdsUpgradePopupSettings());
     }
 }
