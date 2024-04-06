@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerController : Fighter
 {
     [field: SerializeField] public PlayerInfoPanel PlayerInfoPanel;
+    [field: SerializeField] public Camera CharacterCamera {get; private set;}
     public static PlayerController Instance { get; private set; }
     public int Money {get; private set;}
     public int Score {get; private set;}
@@ -82,7 +83,10 @@ public class PlayerController : Fighter
 
     public void EquipmentPopup()
     {
-        PopupSystem.Instance.ShowPopup(new EquipmentPopupSettings());
+        PopupSystem.Instance.ShowPopup(new EquipmentPopupSettings()
+        {
+            CharacterCamera = CharacterCamera
+        });
     }
     
     public bool TryPurchase(int cost)

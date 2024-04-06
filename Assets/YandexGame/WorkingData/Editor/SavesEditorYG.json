@@ -1,5 +1,5 @@
 {
-  "idSave": 3,
+  "idSave": 27,
   "isFirstSession": true,
   "language": "ru",
   "promptDone": false,
@@ -40,8 +40,8 @@
       "Level": 0
     }
   ],
-  "Money": 10,
-  "Score": 2,
-  "Health": 20.0,
+  "Money": 130,
+  "Score": 26,
+  "Health": 62.0,
   "TutorialComplete": true
 }
