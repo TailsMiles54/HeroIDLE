@@ -49,6 +49,7 @@ public class BattleManager : MonoBehaviour
         var health = _enemyController.TakeDamage(damage);
         EnemyInfoPanel.UpdateHealthBar(health, _enemyController.EnemySetting.Health);
 
+        FlyingTextController.Instance.ShowText(Color.red, _enemyController.transform.parent, $"-{damage}");
         if (health <= 0)
         {
             GetReward(_enemyController.EnemySetting);
@@ -72,6 +73,7 @@ public class BattleManager : MonoBehaviour
     {
         var health = PlayerController.TakeDamage(damage);
         PlayerInfoPanel.UpdatePanel(PlayerController);
+        FlyingTextController.Instance.ShowText(Color.red, PlayerController.transform.parent, $"-{damage}");
 
         if (health <= 0)
         {

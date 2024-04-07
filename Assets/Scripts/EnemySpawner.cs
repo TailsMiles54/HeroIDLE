@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     
     public static EnemySpawner Instance { get; private set; }
 
-    private EnemyController _currentEnemyObject;
+    public EnemyController CurrentEnemyObject { get; private set; }
     private WaveSetting WaveSetting => SettingsProvider.Get<WaveSetting>();
     private int _currentWaveStep = 0;
     
@@ -26,15 +26,15 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy()
     { 
-        if (_currentEnemyObject != null)
+        if (CurrentEnemyObject != null)
         {
-            Destroy(_currentEnemyObject.gameObject);
+            Destroy(CurrentEnemyObject.gameObject);
         }
         
         EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]);
         
-        _currentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
-        var enemyController = _currentEnemyObject.GetComponent<EnemyController>();
+        CurrentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
+        var enemyController = CurrentEnemyObject.GetComponent<EnemyController>();
         enemyController.Setup(newEnemySetting);
         BattleManager.Instance.SetupEnemy(enemyController);
         
