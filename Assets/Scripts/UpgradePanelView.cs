@@ -14,6 +14,8 @@ public class UpgradePanelView : MonoBehaviourPrefab
     [field: SerializeField] public Image Image;
     [SerializeField] private Button _button;
 
+    private bool _shakeAnim;
+    
     private UpgradeSetting.UpgradeType _upgradeType;
     private PlayerController.UpgradeLevel CurrentPlayerUpgrade => PlayerController.Instance.Upgrades.First(x => x.Type == _upgradeType);
     
@@ -34,13 +36,17 @@ public class UpgradePanelView : MonoBehaviourPrefab
         _upgradeType = upgradeSetting.Type; 
         Title.text = upgradeSetting.Name;
         Info.text = $"{CurrentPlayerUpgrade.Level}/{upgradeSetting.Value.Count}" +
-                    $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=\"green\">{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#005500>";
+                    $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=#FFA300>{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#FFA300>";
         Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
         Image.sprite = upgradeSetting.Icon;
 
-        if (withAnim)
+        if (withAnim && !_shakeAnim)
         {
-            _button.transform.DOShakeScale(0.8f, 1.2f);
+            _shakeAnim = true;
+            _button.transform.DOShakeScale(0.8f, 1.2f).onComplete += () =>
+            {
+                _shakeAnim = false;
+            };
         }
     }
 
