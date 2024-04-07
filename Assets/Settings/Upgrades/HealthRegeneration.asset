@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: HealthRegeneration
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435
-    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F (\u0440\u0430\u0437 \u0432 5
+    \u0441\u0435\u043A)"
   <Icon>k__BackingField: {fileID: 21300000, guid: bbb15593675c14783b3c8b79b16fa422, type: 3}
   <Description>k__BackingField: 
   <Type>k__BackingField: 6
