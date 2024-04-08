@@ -15,6 +15,7 @@ public class UpgradePanelView : MonoBehaviourPrefab
     [SerializeField] private Button _button;
 
     private bool _shakeAnim;
+    private bool NotMaxLevel => CurrentPlayerUpgrade.Level < SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType).Value.Count - 1;
     
     private UpgradeSetting.UpgradeType _upgradeType;
     private PlayerController.UpgradeLevel CurrentPlayerUpgrade => PlayerController.Instance.Upgrades.First(x => x.Type == _upgradeType);
@@ -35,9 +36,22 @@ public class UpgradePanelView : MonoBehaviourPrefab
     {
         _upgradeType = upgradeSetting.Type; 
         Title.text = upgradeSetting.Name;
-        Info.text = $"{CurrentPlayerUpgrade.Level}/{upgradeSetting.Value.Count}" +
-                    $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=#FFA300>{upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Value}<color=#FFA300>";
-        Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
+
+        var infoText = String.Empty;
+
+        if (NotMaxLevel)
+            infoText += $"{CurrentPlayerUpgrade.Level}/{upgradeSetting.Value.Count - 1}" +
+                $"\n{upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value} -> <color=#FFA300>{upgradeSetting.Value[CurrentPlayerUpgrade.Level + 1].Value}<color=#FFA300>";
+        else
+            infoText += $"<color=#FFA300>Максимум {upgradeSetting.Value[CurrentPlayerUpgrade.Level].Value}<color=#FFA300>";
+
+        Info.text = infoText;
+        
+        if(NotMaxLevel)
+            Content.text = $"Цена: {upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost}";
+        else
+            Content.transform.parent.gameObject.SetActive(false);
+        
         Image.sprite = upgradeSetting.Icon;
 
         if (withAnim && !_shakeAnim)
@@ -52,7 +66,7 @@ public class UpgradePanelView : MonoBehaviourPrefab
 
     private void Upgrade(UpgradeSetting upgradeSetting)
     {
-        if(PlayerController.Instance.TryPurchase(upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost))
+        if(NotMaxLevel && PlayerController.Instance.TryPurchase(upgradeSetting.Value[CurrentPlayerUpgrade.Level+1].Cost))
         {
             PlayerController.Instance.Upgrade(upgradeSetting.Type);
             UpdatePanel(upgradeSetting);
