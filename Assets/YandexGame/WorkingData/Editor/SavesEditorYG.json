@@ -1,5 +1,5 @@
 {
-  "idSave": 180,
+  "idSave": 485,
   "isFirstSession": true,
   "language": "ru",
   "promptDone": false,
@@ -13,7 +13,7 @@
   "Upgrades": [
     {
       "Type": 0,
-      "Level": 0
+      "Level": 15
     },
     {
       "Type": 1,
@@ -25,23 +25,23 @@
     },
     {
       "Type": 3,
-      "Level": 0
+      "Level": 15
     },
     {
       "Type": 4,
-      "Level": 0
+      "Level": 15
     },
     {
       "Type": 5,
-      "Level": 0
+      "Level": 15
     },
     {
       "Type": 6,
       "Level": 15
     }
   ],
-  "Money": 8930,
-  "Score": 136,
-  "Health": 204.800232,
+  "Money": 11410,
+  "Score": 1033,
+  "Health": 43.9000168,
   "TutorialComplete": true
 }

@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [field: SerializeField] public Transform EnemyParent { get; private set; }
     [field: SerializeField] public TMP_Text NextEnemyText { get; private set; }
+    [field: SerializeField] public ParticleSystem SpawnParticle { get; private set; }
     
     public static EnemySpawner Instance { get; private set; }
 
@@ -34,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
         EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]);
         
         CurrentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
+        SpawnParticle.Play();
         var enemyController = CurrentEnemyObject.GetComponent<EnemyController>();
         enemyController.Setup(newEnemySetting);
         BattleManager.Instance.SetupEnemy(enemyController);

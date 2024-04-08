@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BattleManager : MonoBehaviour
 {
@@ -49,7 +51,7 @@ public class BattleManager : MonoBehaviour
         var health = _enemyController.TakeDamage(damage);
         EnemyInfoPanel.UpdateHealthBar(health, _enemyController.EnemySetting.Health);
 
-        FlyingTextController.Instance.ShowText(Color.red, _enemyController.transform.parent, $"-{damage}");
+        FlyingTextController.Instance.ShowText(Color.red, _enemyController.transform.parent, $"-{Math.Round(damage, 2)}");
         if (health <= 0)
         {
             GetReward(_enemyController.EnemySetting);
