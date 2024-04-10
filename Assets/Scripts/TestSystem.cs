@@ -22,6 +22,14 @@ public class TestSystem : MonoBehaviour
                 PlayerController.Instance.Upgrade(UpgradeSetting.UpgradeType.AutoAttackSpeed);
             }
         }
+        
+        if (Input.GetKey(KeyCode.T))
+        {
+            if (Input.GetKeyUp(KeyCode.M))
+            {
+                PlayerController.Instance.AddReward(10000,0);
+            }
+        }
     }
     #endif
 }

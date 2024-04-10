@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquipmentController : MonoSingleton<EquipmentController>
+public class EquipmentController : MonoBehaviour
 {
     private int _indexWeapons;
     private int _indexShields;
