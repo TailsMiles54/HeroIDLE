@@ -11,6 +11,16 @@ public class EnemySetting : ScriptableObject
     [field: SerializeField] public int MoneyReward { get; private set; }
     [field: SerializeField] public int ScoreReward { get; private set; }
     [field: SerializeField] public EnemyController EnemyController { get; private set; }
+
+    public void HealthUp(int newValue)
+    {
+        Health = newValue;
+    }
+    
+    public void DamageUp(int newValue)
+    {
+        Damage = newValue;
+    }
     
     public enum EnemyType
     {
