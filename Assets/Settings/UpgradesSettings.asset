@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: UpgradesSettings
   m_EditorClassIdentifier: 
   <Upgrades>k__BackingField:
+  - {fileID: 11400000, guid: f559a0f7e1deb1d40b39fc80222df169, type: 2}
   - {fileID: 11400000, guid: ea5b1b46fe405754299a2a92dc74e552, type: 2}
   - {fileID: 11400000, guid: 18385d691770eea4aaf2344ec5eb316d, type: 2}
   - {fileID: 11400000, guid: be29d5a6fdddc2a408301a16167f7fba, type: 2}

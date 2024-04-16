@@ -18,6 +18,7 @@ public class PlayerController : Fighter
     
     public List<UpgradeLevel> Upgrades { get; private set; } = new List<UpgradeLevel>()
     {
+        new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.ClickDamage, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Damage, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Health, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.AutoAttackSpeed, Level = 0 },
@@ -121,6 +122,15 @@ public class PlayerController : Fighter
             FlyingTextController.Instance.ShowText(Color.green, transform.parent, $"+{heal}");
             PlayerInfoPanel.UpdatePanel(Instance);
         }
+    }
+
+    public void ClickAttack()
+    {
+        var damage = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.ClickDamage, Upgrades
+            .First(x => x.Type == UpgradeSetting.UpgradeType.ClickDamage).Level);
+
+        AnimationController.Attack();
+        BattleManager.Instance.DamageEnemy(damage);
     }
 
     public void Attack()
