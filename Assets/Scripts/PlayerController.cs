@@ -13,7 +13,7 @@ public class PlayerController : Fighter
     public int Money {get; private set;}
     public int Score {get; private set;}
     public event Action<UpgradeSetting.UpgradeType> Upgraded;
-
+    public EquipmentController EquipmentControllerPuppet;
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
     public List<UpgradeLevel> Upgrades { get; private set; } = new List<UpgradeLevel>()
@@ -86,7 +86,8 @@ public class PlayerController : Fighter
     {
         PopupSystem.Instance.ShowPopup(new EquipmentPopupSettings()
         {
-            CharacterCamera = CharacterCamera
+            CharacterCamera = CharacterCamera,
+            EquipmentControllerPuppet = EquipmentControllerPuppet
         });
     }
     
