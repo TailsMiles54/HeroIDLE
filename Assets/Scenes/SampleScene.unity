@@ -10193,7 +10193,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 398786064}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: ClickAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

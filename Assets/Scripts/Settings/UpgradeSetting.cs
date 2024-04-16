@@ -27,5 +27,6 @@ public class UpgradeSetting : ScriptableObject
         CriticalDamage,
         CriticalChance,
         Heal,
+        ClickDamage
     }
 }
