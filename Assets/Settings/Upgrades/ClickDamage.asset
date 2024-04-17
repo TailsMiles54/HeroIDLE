@@ -19,23 +19,23 @@ MonoBehaviour:
   <Value>k__BackingField:
   - Cost: 0
     Value: 1
-  - Cost: 100
+  - Cost: 10
     Value: 2
-  - Cost: 150
+  - Cost: 20
     Value: 3
-  - Cost: 200
+  - Cost: 30
     Value: 4
-  - Cost: 250
+  - Cost: 50
     Value: 5
-  - Cost: 300
+  - Cost: 80
     Value: 6
-  - Cost: 350
+  - Cost: 120
     Value: 7
-  - Cost: 500
+  - Cost: 170
     Value: 9
-  - Cost: 600
+  - Cost: 320
     Value: 11
-  - Cost: 700
+  - Cost: 500
     Value: 13
   - Cost: 800
     Value: 15

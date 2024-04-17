@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041A\u0430\u043A\u0442\u0443\u0441"
   <Type>k__BackingField: 22
-  <Damage>k__BackingField: 49
+  <Damage>k__BackingField: 36
   <AutoAttackTime>k__BackingField: 2.5
-  <Health>k__BackingField: 1500
+  <Health>k__BackingField: 1125
   <MoneyReward>k__BackingField: 42
   <ScoreReward>k__BackingField: 23
   <EnemyController>k__BackingField: {fileID: 6734611088981573841, guid: 132d734b22bb5614c80ff205ccbdc3ba, type: 3}
