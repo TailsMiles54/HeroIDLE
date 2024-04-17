@@ -1,4 +1,5 @@
 using System;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -55,6 +56,7 @@ public class BattleManager : MonoBehaviour
         if (health <= 0)
         {
             GetReward(_enemyController.EnemySetting);
+            AppMetrica.Instance.ReportEvent("KillEnemy", _enemyController.EnemySetting.Name);
             EnemySpawner.Instance.NextStep();
         }
     }

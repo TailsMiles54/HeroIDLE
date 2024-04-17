@@ -1,5 +1,6 @@
 using System;
 using BlackTailsUnityTools.Editor;
+using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class EnemySpawner : MonoBehaviour
         var enemyController = CurrentEnemyObject.GetComponent<EnemyController>();
         enemyController.Setup(newEnemySetting);
         BattleManager.Instance.SetupEnemy(enemyController);
+        AppMetrica.Instance.ReportEvent("SpawnEnemy", newEnemySetting.Name);
         
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
     }

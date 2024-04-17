@@ -1,6 +1,8 @@
 using System.Linq;
 using UnityEngine;
+#if PLATFORM_WEBGL
 using YG;
+#endif
 
 public class AdsUpgradePopup : Popup<AdsUpgradePopupSettings>
 {
@@ -17,12 +19,17 @@ public class AdsUpgradePopup : Popup<AdsUpgradePopupSettings>
         PopupSystem.Instance.HidePopup();
     }
 
+#if PLATFORM_WEBGL
     private void OnEnable() => YandexGame.RewardVideoEvent += Rewarded;
     private void OnDisable() => YandexGame.RewardVideoEvent -= Rewarded;
+#endif
     
     public void ShowAd()
     {
+        
+#if PLATFORM_WEBGL
         YandexGame.RewVideoShow(RewardId);
+#endif
     }
 
     void Rewarded(int id)

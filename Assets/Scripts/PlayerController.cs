@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using BlackTailsUnityTools.Editor;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class PlayerController : Fighter
@@ -70,6 +71,10 @@ public class PlayerController : Fighter
                     
             _healCoroutine = StartCoroutine(Regeneration());
         }
+
+        var upgrade = JsonConvert.SerializeObject(Upgrades.First(x => x.Type == upgradeType));
+        
+        AppMetrica.Instance.ReportEvent("Upgrade", upgrade);
         
         Upgraded?.Invoke(upgradeType);
         PlayerInfoPanel.UpdatePanel(Instance);
@@ -149,6 +154,7 @@ public class PlayerController : Fighter
         Score += score;
     }
 
+    [Serializable]
     public class UpgradeLevel
     {
         public UpgradeSetting.UpgradeType Type;
