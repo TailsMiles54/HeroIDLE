@@ -20,34 +20,34 @@ MonoBehaviour:
   <Type>k__BackingField: 6
   <Value>k__BackingField:
   - Cost: 0
-    Value: 2
+    Value: 3
   - Cost: 200
-    Value: 2.2
-  - Cost: 250
-    Value: 2.42
-  - Cost: 300
-    Value: 2.66
-  - Cost: 350
-    Value: 2.92
-  - Cost: 400
     Value: 3.2
+  - Cost: 250
+    Value: 3.42
+  - Cost: 300
+    Value: 3.66
+  - Cost: 350
+    Value: 3.92
+  - Cost: 400
+    Value: 4.2
   - Cost: 450
-    Value: 3.5
+    Value: 4.5
   - Cost: 500
-    Value: 3.82
+    Value: 4.82
   - Cost: 550
-    Value: 4.16
+    Value: 5.16
   - Cost: 600
-    Value: 4.52
+    Value: 5.52
   - Cost: 650
-    Value: 4.9
+    Value: 5.9
   - Cost: 700
-    Value: 5.3
+    Value: 6.3
   - Cost: 750
-    Value: 5.72
+    Value: 6.72
   - Cost: 800
-    Value: 6.16
+    Value: 7.16
   - Cost: 850
-    Value: 6.62
+    Value: 7.62
   - Cost: 900
-    Value: 7.1
+    Value: 8.1

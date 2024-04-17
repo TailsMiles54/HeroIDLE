@@ -21,7 +21,11 @@ public class Tutorial : MonoSingleton<Tutorial>
     
     public void OnEnable()
     {
+#if PLATFORM_WEBGL
         if (!YandexGame.savesData.TutorialComplete)
+#else
+        if(!SaveManager.Instance.PlayerSave.TutorialComplete)
+#endif
         {
             Sequence sequence = DOTween.Sequence();
             sequence.Append(_attackTutorImage.DOFade(1, 1f));

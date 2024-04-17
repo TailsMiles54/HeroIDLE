@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class EnemyInfoPanel : MonoBehaviour
 {
     [field: SerializeField] public TMP_Text Title { get; private set; }
+    [field: SerializeField] public TMP_Text Health { get; private set; }
     [field: SerializeField] public Scrollbar HealthBar { get; private set; }
     
     public void UpdatePanel(EnemySetting enemySetting)
@@ -15,6 +16,7 @@ public class EnemyInfoPanel : MonoBehaviour
 
     public void UpdateHealthBar(float current, float maxHealth)
     {
+        Health.text = $"{(int)current}/{(int)maxHealth}";
         var value = current / maxHealth;
         HealthBar.value = value;
     } 
