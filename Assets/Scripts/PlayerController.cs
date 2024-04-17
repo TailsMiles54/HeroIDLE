@@ -124,10 +124,15 @@ public class PlayerController : Fighter
         {
             var heal = GetUpgradeValue(UpgradeSetting.UpgradeType.Heal);
             yield return new WaitForSeconds(5);
-            Health += heal;
+            Regeneration(heal);
             FlyingTextController.Instance.ShowText(Color.green, transform.parent, $"+{heal}");
             PlayerInfoPanel.UpdatePanel(Instance);
         }
+    }
+
+    public void Regeneration(float heal)
+    {
+        Health += heal;
     }
 
     public void ClickAttack()

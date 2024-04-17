@@ -16,8 +16,13 @@ public class SaveManager : MonoSingleton<SaveManager>
     
 #if !PLATFORM_WEBGL
     public PlayerSave PlayerSave;
+
+    private void Start()
+    {
+        PlayerSave = new PlayerSave();
+    }
 #endif
-    
+
     public void Save(PlayerController playerController)
     {
 #if PLATFORM_WEBGL

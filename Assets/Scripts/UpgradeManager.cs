@@ -4,6 +4,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     [field: SerializeField] public Transform UpgradesParent { get; private set; }
+    [field: SerializeField] public GameObject EmptyPanel { get; private set; }
 
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
     
@@ -22,6 +23,8 @@ public class UpgradeManager : MonoBehaviour
             var upgradePanelInstance = Instantiate(upgradePanelPrefab, UpgradesParent);
             upgradePanelInstance.Setup(upgradeSetting);
         }
+        
+        EmptyPanel.transform.SetSiblingIndex(UpgradesParent.childCount);
     }
 
     public void ShowAdsUpgradePopup()

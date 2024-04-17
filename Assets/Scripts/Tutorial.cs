@@ -19,7 +19,7 @@ public class Tutorial : MonoSingleton<Tutorial>
     [SerializeField] private Image _nextEnemyTutorArrowImage;
     [SerializeField] private Transform _nextEnemyTutorArrow;
     
-    public void OnEnable()
+    public void Start()
     {
 #if PLATFORM_WEBGL
         if (!YandexGame.savesData.TutorialComplete)
