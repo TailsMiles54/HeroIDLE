@@ -35,8 +35,8 @@ public class EnemiesCreatorTool
 
         foreach (var enemySetting in enemiesSettings)
         {
-            enemySetting.DamageUp((int)(enemySetting.Damage * 1.5f));
-            enemySetting.HealthUp(enemySetting.Health * 2);
+            // enemySetting.DamageUp((int)(enemySetting.Damage * 1.5f));
+            // enemySetting.HealthUp(enemySetting.Health * 2);
             EditorUtility.SetDirty(enemySetting);
         }
     }
