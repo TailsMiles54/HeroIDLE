@@ -12,6 +12,11 @@ public class EnemySetting : ScriptableObject
     [field: SerializeField] public int ScoreReward { get; private set; }
     [field: SerializeField] public EnemyController EnemyController { get; private set; }
 
+    public void AutoAttackTimeSet(float value)
+    {
+        AutoAttackTime = value;
+    }
+    
     public void HealthUp(int newValue)
     {
         Health = newValue;
