@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpgradePanelView : MonoBehaviourPrefab
+public class UpgradePanelView : RightPanelElement
 {
     [field: SerializeField] public TMP_Text Title;
     [field: SerializeField] public TMP_Text Info;

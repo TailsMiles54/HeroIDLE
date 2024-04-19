@@ -28,6 +28,12 @@ public class PlayerController : Fighter
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.CriticalChance, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Heal, Level = 0 },
     };
+
+    public List<Quest> Quests { get; private set; } = new List<Quest>()
+    {
+        new Quest("Test 1", "Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1", QuestType.Hunt),
+        new Quest("Test 2", "Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2",QuestType.Upgrade),
+    };
     
     public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
 
