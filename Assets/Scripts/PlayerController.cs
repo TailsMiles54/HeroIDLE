@@ -31,8 +31,8 @@ public class PlayerController : Fighter
 
     public List<Quest> Quests { get; private set; } = new List<Quest>()
     {
-        new Quest("Test 1", "Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1", QuestType.Hunt),
-        new Quest("Test 2", "Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2",QuestType.Upgrade),
+        new Quest("Test 1", "Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1", QuestType.Hunt, QuestLine.Main),
+        new Quest("Test 2", "Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2", QuestType.Upgrade, QuestLine.Secondary),
     };
     
     public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
