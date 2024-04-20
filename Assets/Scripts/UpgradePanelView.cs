@@ -34,7 +34,7 @@ public class UpgradePanelView : RightPanelElement
         SaveManager.Instance.Loaded += () => UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType));
         PlayerController.Instance.Upgraded += (upgradeType) =>
         {
-            if(upgradeType == _upgradeType)
+            if(upgradeType == _upgradeType && RightPanelContentController.Instance.CurrentTab == TabType.Upgrades)
                 UpdatePanel(SettingsProvider.Get<UpgradesSettings>().Upgrades.First(x => x.Type == _upgradeType), true);
         };
     }

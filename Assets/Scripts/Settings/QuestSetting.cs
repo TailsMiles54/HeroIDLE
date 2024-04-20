@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BlackTailsUnityTools.Editor;
 using UnityEngine;
 
@@ -25,6 +26,14 @@ public class QuestSetting : ScriptableObject
     [field: SerializeField] public EnemySetting.EnemyType EnemyType { get; private set; }
     [field: SerializeField] public int TargetCount { get; private set; }
 
+    public bool Available()
+    {
+        var completed = PlayerController.Instance.Quests.Any(x => x.Id == Id);
+        var previous = PlayerController.Instance.Quests.Any(x => x.Id == PreviousQuestId && x.Completed) || PreviousQuestId == String.Empty;
+
+        return !completed && previous;
+    }
+    
     public void Init(string id, string desc, EnemySetting.EnemyType enemyType, string previousQuestId)
     {
         var enemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(enemyType);

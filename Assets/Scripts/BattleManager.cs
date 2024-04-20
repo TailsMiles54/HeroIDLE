@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : MonoSingleton<BattleManager>
 {
     [field: SerializeField] public PlayerInfoPanel PlayerInfoPanel;
     [field: SerializeField] public EnemyInfoPanel EnemyInfoPanel;
@@ -12,17 +12,13 @@ public class BattleManager : MonoBehaviour
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
     private EnemyController _enemyController;
 
+    public event Action<EnemySetting.EnemyType> EnemyKilled; 
+
     private bool _pause;
     [SerializeField] private Image _buttonImage;
     [SerializeField] private Sprite _playSprite;
     [SerializeField] private Sprite _pauseSprite;
     [SerializeField] private ParticleSystem _particleCritical;
-    
-    public static BattleManager Instance { get; private set; }
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     public void SetupEnemy(EnemyController enemyController)
     {
@@ -57,6 +53,7 @@ public class BattleManager : MonoBehaviour
         {
             GetReward(_enemyController.EnemySetting);
             AppMetrica.Instance.ReportEvent("KillEnemy", _enemyController.EnemySetting.Name);
+            EnemyKilled?.Invoke(_enemyController.EnemySetting.Type);
             EnemySpawner.Instance.NextStep();
         }
     }

@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using BlackTailsUnityTools.Editor;
 
 public class QuestSystem : MonoSingleton<QuestSystem>
 {
-    // Start is called before the first frame update
-    void Start()
+    private PlayerController PlayerController => PlayerController.Instance;
+
+    private void Start()
     {
-        
+        GenerateQuests();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GenerateQuests()
     {
-        
+        var quests = SettingsProvider.Get<QuestsSettings>().QuestSettings.Where(x => x.Available());
+
+        foreach (var questSetting in quests)
+        {
+            var quest = new Quest(questSetting.Id);
+            PlayerController.Quests.Add(quest);
+        }
+    }
+
+    public void CompleteQuest(string questId)
+    {
+        var quest = PlayerController.Quests.FirstOrDefault(x => x.Id == questId);
+        if (quest!= null)
+        {
+            quest.Complete();
+        }
+        GenerateQuests();
     }
 }

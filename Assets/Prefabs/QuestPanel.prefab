@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: {fileID: 2743202837503432173}
   Description: {fileID: 6019545135895343997}
+  Progress: {fileID: 5038406905244074759}
 --- !u!222 &6614621374912059953
 CanvasRenderer:
   m_ObjectHideFlags: 0

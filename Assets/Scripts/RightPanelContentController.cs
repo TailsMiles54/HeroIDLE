@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BlackTailsUnityTools.Editor;
 using DG.Tweening;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
     [SerializeField] private Transform _content;
     private Vector3 _contentStartPos;
 
-    private TabType _currentTab;
+    public TabType CurrentTab { get; private set; }
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
 
     private void Start()
@@ -38,12 +39,12 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
     
     public void TabTransition(TabType tabType, bool ignoreTabType = false)
     {
-        if(_currentTab == tabType && !ignoreTabType)
+        if(CurrentTab == tabType && !ignoreTabType)
             return;
 
         _content.DOMoveY(-500, 0.8f).SetEase(Ease.OutBack).OnComplete(() =>
         {
-            _currentTab = tabType;
+            CurrentTab = tabType;
         
             _rightPanelElements.ForEach(x => Destroy(x.gameObject));
             _rightPanelElements.Clear();
@@ -63,7 +64,7 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
                 case TabType.Companions:
                     break;
                 case TabType.Quests:
-                    var quests = PlayerController.Instance.Quests;
+                    var quests = PlayerController.Instance.Quests.Where(x => !x.Completed);
                     foreach (var quest in quests)
                     {
                         var upgradePanelPrefab = SettingsProvider.Get<PrefabsSettings>().GetObject<QuestPanelView>();

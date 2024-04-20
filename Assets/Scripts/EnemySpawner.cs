@@ -43,6 +43,7 @@ public class EnemySpawner : MonoBehaviour
         AppMetrica.Instance.ReportEvent("SpawnEnemy", newEnemySetting.Name);
         
         BattleManager.Instance.EnemyInfoPanel.UpdatePanel(newEnemySetting);
+        QuestSystem.Instance.GenerateQuests();
     }
 
     public void NextStep()
