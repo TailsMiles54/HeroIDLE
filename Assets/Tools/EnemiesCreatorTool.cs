@@ -42,3 +42,27 @@ public class EnemiesCreatorTool
     }
     #endif
 }
+
+
+public class MainQuestCreatorTool
+{
+#if UNITY_EDITOR
+    [MenuItem("BlackTailsTools/Создать основные квесты")]
+    static void CreateEnemies()
+    {
+        var questsSettings = SettingsProvider.Get<QuestsSettings>();
+        var enemiesTypes = Enum.GetValues(typeof(EnemySetting.EnemyType)).Cast<EnemySetting.EnemyType>().ToList();
+
+        foreach (var enemyType in enemiesTypes)
+        {
+            var index = enemiesTypes.IndexOf(enemyType);
+            QuestSetting questSetting = ScriptableObject.CreateInstance<QuestSetting>();
+            questSetting.Init($"main_{index}", "Необходимо убить {0} {1}. Потом сможешь идти дальше.", enemyType, $"main_{index - 1}");
+            AssetDatabase.CreateAsset(questSetting, $"Assets/Settings/Quests/Main/main_{index}.asset");
+            questsSettings.AddQuest(questSetting);
+
+            Debug.Log($"main_{index}.asset created");
+        }
+    }
+#endif
+}

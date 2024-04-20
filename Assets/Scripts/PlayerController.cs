@@ -29,11 +29,7 @@ public class PlayerController : Fighter
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Heal, Level = 0 },
     };
 
-    public List<Quest> Quests { get; private set; } = new List<Quest>()
-    {
-        new Quest("Test 1", "Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1", QuestType.Hunt, QuestLine.Main),
-        new Quest("Test 2", "Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2Test 2", QuestType.Upgrade, QuestLine.Secondary),
-    };
+    public List<Quest> Quests { get; private set; } = new List<Quest>() { };
     
     public float MaxHealth => UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
 
@@ -138,7 +134,7 @@ public class PlayerController : Fighter
 
     public void Regeneration(float heal)
     {
-        Health += heal;
+        Health = Math.Clamp(Health + heal, 0, MaxHealth);
     }
 
     public void ClickAttack()
