@@ -13,6 +13,8 @@ public class PlayerController : Fighter
     public static PlayerController Instance { get; private set; }
     public int Money {get; private set;}
     public int Score {get; private set;}
+    
+    public int PlayerLevel {get; private set;}
     public event Action<UpgradeSetting.UpgradeType> Upgraded;
     public EquipmentController EquipmentControllerPuppet;
     private UpgradesSettings UpgradesSettings => SettingsProvider.Get<UpgradesSettings>();
@@ -178,5 +180,27 @@ public class PlayerController : Fighter
         
         if(savesDataUpgrades != null && savesDataUpgrades.Count != 0)
             Upgrades = savesDataUpgrades;
+    }
+}
+
+public class PlayerLevel
+{
+    public int Level { get; private set; }
+    public int Exp { get; private set; }
+    
+    public PlayerLevel(int level, int exp)
+    {
+        Level = level;
+        Exp = exp;
+    }
+
+    public void AddExp(int exp)
+    {
+        Exp += exp;
+        if (Exp >= Level * 100)
+        {
+            Level++;
+            Exp -= Level * 100;
+        }
     }
 }
