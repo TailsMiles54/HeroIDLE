@@ -42,7 +42,21 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
         if(CurrentTab == tabType && !ignoreTabType)
             return;
 
-        _content.DOMoveY(-500, 0.8f).SetEase(Ease.OutBack).OnComplete(() =>
+        if (ignoreTabType)
+        {
+            UpdateContent();
+        }
+        else
+        {
+            _content.DOMoveY(-500, 0.8f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                UpdateContent();
+
+                _content.DOMoveY(_contentStartPos.y, 0.5f).SetEase(Ease.OutBack);
+            });   
+        }
+
+        void UpdateContent()
         {
             CurrentTab = tabType;
         
@@ -76,9 +90,7 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
                     break;
             }
             _emptyPanel.transform.SetSiblingIndex(_parent.childCount);
-
-            _content.DOMoveY(_contentStartPos.y, 0.5f).SetEase(Ease.OutBack);
-        });
+        }
     }
 }
 

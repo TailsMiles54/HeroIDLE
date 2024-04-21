@@ -4,22 +4,17 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : MonoSingleton<EnemySpawner>
 {
     [field: SerializeField] public Transform EnemyParent { get; private set; }
     [field: SerializeField] public TMP_Text NextEnemyText { get; private set; }
     [field: SerializeField] public ParticleSystem SpawnParticle { get; private set; }
-    
-    public static EnemySpawner Instance { get; private set; }
 
     public EnemyController CurrentEnemyObject { get; private set; }
     private WaveSetting WaveSetting => SettingsProvider.Get<WaveSetting>();
     private int _currentWaveStep = 0;
-    
-    private void Awake()
-    {
-        Instance = this;
-    }
+
+    private int _maxWave;
 
     private void Start()
     {
