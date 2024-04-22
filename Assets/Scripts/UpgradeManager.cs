@@ -6,9 +6,4 @@ public class UpgradeManager : MonoBehaviour
     {
         RightPanelContentController.Instance.TabTransition(TabType.Upgrades, true);
     }
-
-    public void ShowAdsUpgradePopup()
-    {
-        PopupSystem.Instance.ShowPopup(new AdsUpgradePopupSettings());
-    }
 }

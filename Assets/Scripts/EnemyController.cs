@@ -18,6 +18,7 @@ public class EnemyController : Fighter
     {
         while (EnemySetting.AutoAttackTime < 15 && Health > 0 && EnemySetting.AutoAttackTime > 0)
         {
+            BattleManager.Instance.EnemyInfoPanel.UpdateAutoAttackTimeBar(EnemySetting.AutoAttackTime);
             yield return new WaitForSeconds(EnemySetting.AutoAttackTime);
             Attack();
         }

@@ -117,6 +117,7 @@ public class PlayerController : Fighter
         {
             var waitTime = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.AutoAttackSpeed,
                 Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.AutoAttackSpeed).Level);
+            PlayerInfoPanel.UpdateAutoAttackTimeBar(waitTime);
             yield return new WaitForSeconds(waitTime);
             Attack();
         }

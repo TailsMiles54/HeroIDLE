@@ -1,5 +1,5 @@
 {
-  "idSave": 938,
+  "idSave": 1124,
   "isFirstSession": true,
   "language": "ru",
   "promptDone": false,
@@ -21,31 +21,31 @@
     },
     {
       "Type": 2,
-      "Level": 0
+      "Level": 1
     },
     {
       "Type": 3,
-      "Level": 0
+      "Level": 1
     },
     {
       "Type": 4,
-      "Level": 0
+      "Level": 1
     },
     {
       "Type": 5,
-      "Level": 0
+      "Level": 1
     },
     {
       "Type": 6,
-      "Level": 1
+      "Level": 5
     },
     {
       "Type": 7,
       "Level": 13
     }
   ],
-  "Money": 309,
-  "Score": 1911,
-  "Health": 78.2994843,
+  "Money": 778,
+  "Score": 2190,
+  "Health": 102.759827,
   "TutorialComplete": true
 }

@@ -6,7 +6,8 @@ public class EnemyInfoPanel : MonoBehaviour
 {
     [field: SerializeField] public TMP_Text Title { get; private set; }
     [field: SerializeField] public TMP_Text Health { get; private set; }
-    [field: SerializeField] public Scrollbar HealthBar { get; private set; }
+    [field: SerializeField] public LandedProgressBar LandedProgressBarHealth { get; private set; }
+    [field: SerializeField] public LandedProgressBar LandedProgressBarAutoAttackTime { get; private set; }
     
     public void UpdatePanel(EnemySetting enemySetting)
     {
@@ -18,6 +19,11 @@ public class EnemyInfoPanel : MonoBehaviour
     {
         Health.text = $"{(int)current}/{(int)maxHealth}";
         var value = current / maxHealth;
-        HealthBar.value = value;
-    } 
+        LandedProgressBarHealth.UpdateProgress(value);
+    }
+    
+    public void UpdateAutoAttackTimeBar(float time)
+    {
+        LandedProgressBarAutoAttackTime.ToMinWithTime(time);
+    }
 }
