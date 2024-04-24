@@ -30,6 +30,8 @@ public class PlayerController : Fighter
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.CriticalChance, Level = 0 },
         new UpgradeLevel() { Type = UpgradeSetting.UpgradeType.Heal, Level = 0 },
     };
+    
+    public List<Companion> Companions { get; private set; } = new List<Companion>();
 
     public List<Quest> Quests { get; private set; } = new List<Quest>() { };
     
@@ -98,6 +100,11 @@ public class PlayerController : Fighter
             CharacterCamera = CharacterCamera,
             EquipmentControllerPuppet = EquipmentControllerPuppet
         });
+    }
+
+    public void AddCompanion(Companion companion)
+    {
+        Companions.Add(companion);
     }
     
     public bool TryPurchase(int cost)
@@ -204,4 +211,10 @@ public class PlayerLevel
             Exp -= Level * 100;
         }
     }
+}
+
+public class Companion
+{
+    public string Id { get; private set; }
+    public int Level { get; private set; }
 }

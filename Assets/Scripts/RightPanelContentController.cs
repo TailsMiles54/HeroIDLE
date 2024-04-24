@@ -76,6 +76,11 @@ public class RightPanelContentController : MonoSingleton<RightPanelContentContro
         
                     break;
                 case TabType.Companions:
+                    var companions = PlayerController.Instance.Companions;
+                    foreach (var companion in companions)
+                    {
+                        
+                    }
                     break;
                 case TabType.Quests:
                     var quests = PlayerController.Instance.Quests.Where(x => !x.Completed);
