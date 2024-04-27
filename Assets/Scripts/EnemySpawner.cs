@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using BlackTailsUnityTools.Editor;
 using Newtonsoft.Json;
 using TMPro;
@@ -28,7 +29,7 @@ public class EnemySpawner : MonoSingleton<EnemySpawner>
             Destroy(CurrentEnemyObject.gameObject);
         }
         
-        EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]);
+        EnemySetting newEnemySetting = SettingsProvider.Get<EnemiesSettings>().GetEnemySetting(WaveSetting.WaveSteps[0].WaveEnemyList[_currentWaveStep]);
         
         CurrentEnemyObject = Instantiate(newEnemySetting.EnemyController, EnemyParent);
         SpawnParticle.Play();
@@ -48,18 +49,14 @@ public class EnemySpawner : MonoSingleton<EnemySpawner>
 
     public void NextEnemy()
     {
-        _currentWaveStep = Math.Clamp(_currentWaveStep + 1, 0, WaveSetting.WaveEnemyList.Count-1);
+        _currentWaveStep = Math.Clamp(_currentWaveStep + 1, 0, WaveSetting.WaveSteps[0].WaveEnemyList.Count-1);
         Debug.Log(_currentWaveStep);
-        NextEnemyText.text = "Следующий враг: " + SettingsProvider.Get<EnemiesSettings>()
-            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Name;
     }
 
     public void PreviousEnemy()
     {
-        _currentWaveStep = Math.Clamp(_currentWaveStep - 1, 0, WaveSetting.WaveEnemyList.Count-1);
+        _currentWaveStep = Math.Clamp(_currentWaveStep - 1, 0, WaveSetting.WaveSteps[0].WaveEnemyList.Count-1);
         Debug.Log(_currentWaveStep);
-        NextEnemyText.text = "Следующий враг: " + SettingsProvider.Get<EnemiesSettings>()
-            .GetEnemySetting(WaveSetting.WaveEnemyList[_currentWaveStep]).Name;
     }
 
     public void GoToFirstEnemy()
