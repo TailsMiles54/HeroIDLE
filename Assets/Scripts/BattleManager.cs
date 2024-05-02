@@ -25,11 +25,6 @@ public class BattleManager : MonoSingleton<BattleManager>
         _enemyController = enemyController;
     }
 
-    public void NextEnemy()
-    {
-        EnemySpawner.Instance.NextStep();
-    }
-
     public void DamageEnemy(float damage)
     {
         if(_pause)
@@ -54,7 +49,7 @@ public class BattleManager : MonoSingleton<BattleManager>
             GetReward(_enemyController.EnemySetting);
             AppMetrica.Instance.ReportEvent("KillEnemy", _enemyController.EnemySetting.Name);
             EnemyKilled?.Invoke(_enemyController.EnemySetting.Type);
-            EnemySpawner.Instance.NextStep();
+            WaveManager.Instance.NextEnemy();
         }
     }
 

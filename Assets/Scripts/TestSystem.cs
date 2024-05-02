@@ -11,7 +11,7 @@ public class TestSystem : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.K))
             {
-                BattleManager.Instance.NextEnemy();
+                WaveManager.Instance.NextEnemy();
             }
         }
         

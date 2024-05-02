@@ -5,5 +5,5 @@ using UnityEngine;
 public class WavesSettings : ScriptableObject
 {
     [field: SerializeField]
-    public List<EnemySetting.EnemyType> WaveEnemyList { get; private set; } = new List<EnemySetting.EnemyType>() { };
+    public List<WaveSetting> Waves { get; private set; } = new List<WaveSetting>() { };
 }
