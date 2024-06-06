@@ -37,8 +37,6 @@ public class DeathPopup : Popup<DeathPopupSettings>
         {
             Time.timeScale = 1;
             PlayerController.Instance.Review();
-            EnemySpawner.Instance.GoToFirstEnemy();
-            EnemySpawner.Instance.SpawnEnemy();
             PopupSystem.Instance.HidePopup();
         }
     }
