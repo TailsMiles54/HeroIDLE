@@ -24,15 +24,10 @@ namespace YG
         public int Money;
         public int Score;
         public float Health;
+        public WavesProgressSaveData WavesProgressSaveData;
         
         public bool TutorialComplete;
         
-        // Ваши сохранения
-
-        // ...
-
-        // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
-
 
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()

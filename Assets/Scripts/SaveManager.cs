@@ -51,6 +51,22 @@ public class SaveManager : MonoSingleton<SaveManager>
 #endif
     }
 
+    public void SaveWavesProgress(int wave, int step, int enemy)
+    {
+#if PLATFORM_WEBGL
+        YandexGame.savesData.WavesProgressSaveData = new WavesProgressSaveData()
+        {
+            CurrentWave = wave,
+            CurrentStep = step,
+            CurrentEnemy = enemy
+        };
+        
+        YandexGame.SaveProgress();
+// #else
+//         PlayerSave.SaveProgress();
+#endif
+    }
+
     public void RestoreSave()
     {
 #if PLATFORM_WEBGL
@@ -76,11 +92,13 @@ public class SaveManager : MonoSingleton<SaveManager>
 #if PLATFORM_WEBGL
         player.LoadHealth(YandexGame.savesData.Health);
         player.LoadProgress(YandexGame.savesData.Score, YandexGame.savesData.Money, YandexGame.savesData.Upgrades);
+        WaveManager.Instance.LoadData(YandexGame.savesData.WavesProgressSaveData);
 #else
         PlayerSave.LoadProgress();
         player.LoadHealth(PlayerSave.Health);
         player.LoadProgress(PlayerSave.Score, PlayerSave.Money, PlayerSave.Upgrades);
 #endif
+        PlayerController.Instance.PlayerInfoPanel.UpdatePanel(PlayerController.Instance);
         
         Loaded?.Invoke();
     }
@@ -121,4 +139,11 @@ public class PlayerSave
             file.Close();
         }
     }
+}
+
+public class WavesProgressSaveData
+{
+    public int CurrentWave;
+    public int CurrentStep;
+    public int CurrentEnemy;
 }

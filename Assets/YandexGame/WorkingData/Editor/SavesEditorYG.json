@@ -1,5 +1,5 @@
 {
-  "idSave": 1565,
+  "idSave": 1653,
   "isFirstSession": true,
   "language": "ru",
   "promptDone": false,
@@ -12,40 +12,45 @@
   ],
   "Upgrades": [
     {
-      "Type": 0,
-      "Level": 4
-    },
-    {
-      "Type": 1,
-      "Level": 2
-    },
-    {
-      "Type": 2,
-      "Level": 2
-    },
-    {
-      "Type": 3,
-      "Level": 1
-    },
-    {
-      "Type": 4,
-      "Level": 1
-    },
-    {
-      "Type": 5,
-      "Level": 1
-    },
-    {
-      "Type": 6,
+      "Type": 7,
       "Level": 5
     },
     {
-      "Type": 7,
-      "Level": 13
+      "Type": 0,
+      "Level": 0
+    },
+    {
+      "Type": 1,
+      "Level": 0
+    },
+    {
+      "Type": 2,
+      "Level": 0
+    },
+    {
+      "Type": 3,
+      "Level": 0
+    },
+    {
+      "Type": 4,
+      "Level": 0
+    },
+    {
+      "Type": 5,
+      "Level": 0
+    },
+    {
+      "Type": 6,
+      "Level": 0
     }
   ],
-  "Money": 6113,
-  "Score": 2937,
-  "Health": 41.5998764,
+  "Money": 38,
+  "Score": 30,
+  "Health": 100.0,
+  "WavesProgressSaveData": {
+    "CurrentWave": 0,
+    "CurrentStep": 0,
+    "CurrentEnemy": 0
+  },
   "TutorialComplete": true
 }

@@ -50,12 +50,18 @@ public class PlayerController : Fighter
     
     private void Start()
     {
+        SaveManager.Instance.GetLoad();
         Health = UpgradesSettings.GetBonusValue(UpgradeSetting.UpgradeType.Health, Upgrades.First(x => x.Type == UpgradeSetting.UpgradeType.Health).Level);
                     
         _autoAttackCoroutine = StartCoroutine(StartAutoAttack());
         _healCoroutine = StartCoroutine(Regeneration());
-        
-        SaveManager.Instance.GetLoad();
+    }
+
+    public void ResetHealth()
+    {
+        Health = MaxHealth;
+        PlayerInfoPanel.UpdatePanel(Instance);
+        SaveManager.Instance.Save(Instance);
     }
 
     public void Upgrade(UpgradeSetting.UpgradeType upgradeType)

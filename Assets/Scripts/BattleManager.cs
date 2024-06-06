@@ -73,10 +73,9 @@ public class BattleManager : MonoSingleton<BattleManager>
 
         if (health <= 0)
         {
-            PopupSystem.Instance.ShowPopup(new DeathPopupSettings()
-            {
-                Score = PlayerController.Instance.Score
-            });
+            AppMetrica.Instance.ReportEvent("Dead");
+            WaveManager.Instance.GoToFirstEnemy();
+            PlayerController.Instance.ResetHealth();
         }
     }
 

@@ -26,15 +26,14 @@ public class WaveManager : MonoSingleton<WaveManager>
     public void NextWave()
     {
         CurrentWave++;
-        CurrentStep = 1;
+        CurrentStep = 0;
     }
 
     public void NextStep()
     {
         if (CurrentStep + 1 >= CurrentWaveSetting.WaveSteps.Count)
         {
-            CurrentWave++;
-            CurrentStep = 0;
+            NextWave();
         }
         else
         {
@@ -49,8 +48,21 @@ public class WaveManager : MonoSingleton<WaveManager>
         SpawnEnemy();
     }
 
+    public void LoadData(WavesProgressSaveData wavesProgressSaveData)
+    {
+        CurrentWave = wavesProgressSaveData.CurrentWave;
+        CurrentStep = wavesProgressSaveData.CurrentStep;
+        CurrentEnemy = wavesProgressSaveData.CurrentEnemy;
+    }
+
     public void SpawnEnemy()
     { 
+        WaveScrollbar.numberOfSteps = CurrentWaveSetting.WaveSteps.Count-1;
+        WaveScrollbar.value = (float)CurrentStep / CurrentWaveSetting.WaveSteps.Count;
+        WaveText.text = $"Wave: {CurrentWave+1} Current Step: {CurrentStep+1}";
+
+        SaveManager.Instance.SaveWavesProgress(CurrentWave, CurrentStep, CurrentEnemy);
+        
         if (CurrentEnemyObject != null)
         {
             Destroy(CurrentEnemyObject.gameObject);
@@ -72,6 +84,8 @@ public class WaveManager : MonoSingleton<WaveManager>
     public void GoToFirstEnemy()
     {
         CurrentStep = 0;
+        CurrentEnemy = 0;
+        SpawnEnemy();
     }
 
     public void NextEnemy()
@@ -82,10 +96,7 @@ public class WaveManager : MonoSingleton<WaveManager>
             CurrentEnemy = 0;
             NextStep();
         }
-
-        WaveScrollbar.numberOfSteps = CurrentWaveSetting.WaveSteps.Count-1;
-        WaveScrollbar.value = (float)CurrentStep / CurrentWaveSetting.WaveSteps.Count;
-        WaveText.text = $"Wave: {CurrentWave+1} Current Step: {CurrentStep+1}";
+        
         SpawnEnemy();
     }
 }
