@@ -1,5 +1,5 @@
 {
-  "idSave": 1653,
+  "idSave": 1678,
   "isFirstSession": true,
   "language": "ru",
   "promptDone": false,
@@ -44,13 +44,13 @@
       "Level": 0
     }
   ],
-  "Money": 38,
-  "Score": 30,
+  "Money": 154,
+  "Score": 41,
   "Health": 100.0,
   "WavesProgressSaveData": {
     "CurrentWave": 0,
     "CurrentStep": 0,
-    "CurrentEnemy": 0
+    "CurrentEnemy": 5
   },
   "TutorialComplete": true
 }
